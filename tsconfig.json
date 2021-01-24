@@ -21,13 +21,14 @@
       ],
       "@/*": [
         "./*"
-      ]
+      ],
     },
     "types": [
       "@nuxt/types",
       "@nuxt/content",
       "@nuxtjs/color-mode",
-      "@types/node"
+      "@types/node",
+      "@types/jest",
     ]
   },
   "exclude": [
@@ -36,6 +37,6 @@
     "dist"
   ],
   "include": [
-    "custom.d.ts",
+    "ts-shim.d.ts",
   ]
 }
