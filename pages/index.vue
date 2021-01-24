@@ -1,6 +1,5 @@
 <template>
   <div>
-    Hello world!
     <DarkMode />
   </div>
 </template>
