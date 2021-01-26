@@ -3,7 +3,24 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
+- type: heading
+  label: Products
+- type: directory
+  path: content/products
+  label: Products
+  create: all
+  match: "**/*"
+- type: heading
+  label: Config
+- type: document
+  path: content/data/HomePage.json
+  label: Home Page
+  match: "**/*"
+- type: document
+  path: content/data/Tags.json
+  label: Tags
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
