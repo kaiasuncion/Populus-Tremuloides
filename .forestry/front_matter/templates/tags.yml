@@ -9,3 +9,5 @@ fields:
     min: 
     max: 
   label: Tag
+pages:
+- content/data/Tags.json

@@ -67,3 +67,15 @@ fields:
   label: Custom Fields
   description: Does the product have varieties e.g. Color, Price, Material, Size,
     etc
+- name: tags
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: tags
+      file: content/data/Tags.json
+      path: tag
+  label: Tags
