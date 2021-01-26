@@ -12,3 +12,4 @@ Step Five: Deploy?
 Design Prototype
 
 ![Responsive Design Mock Up](/assets/mockUps/MockUp.jpg)
+[Prototype Mockup Credit](https://www.behance.net/gallery/53339171/iScreens-Free-Mock-up)
