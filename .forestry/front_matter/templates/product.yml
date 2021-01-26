@@ -1,0 +1,69 @@
+---
+label: Product
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Name
+  description: Name of the product
+- name: product_description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Product Description
+  description: Describe the product
+- name: product_image
+  type: file
+  config:
+    maxSize: 64
+  label: Product Image
+  description: This is the product that will appear on the page
+- name: date_added
+  type: datetime
+  description: Select the date this product is added
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Date Added
+- name: product_price
+  type: number
+  label: Product Price
+  description: The price of the product
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: custom_fields
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: required
+    type: boolean
+    label: Required
+  - name: options
+    type: text
+    config:
+      required: false
+    label: Options
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Custom Fields
+  description: Does the product have varieties e.g. Color, Price, Material, Size,
+    etc

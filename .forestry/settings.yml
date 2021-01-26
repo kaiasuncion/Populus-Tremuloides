@@ -16,11 +16,9 @@ sections:
 - type: document
   path: content/data/HomePage.json
   label: Home Page
-  match: "**/*"
 - type: document
   path: content/data/Tags.json
   label: Tags
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
