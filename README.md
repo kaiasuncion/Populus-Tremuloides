@@ -8,3 +8,7 @@ Step Two: Forestry
 Step Three: Stripe
 
 Step Five: Deploy?
+
+Design
+
+![Responsive Design Mock Up](/assets/mockUps/MockUp.jpg)
