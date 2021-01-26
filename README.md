@@ -9,6 +9,6 @@ Step Three: Stripe
 
 Step Five: Deploy?
 
-Design
+Design Prototype
 
 ![Responsive Design Mock Up](/assets/mockUps/MockUp.jpg)
