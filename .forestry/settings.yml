@@ -11,6 +11,8 @@ sections:
   label: Products
   create: all
   match: "**/*"
+  templates:
+  - product
 - type: heading
   label: Config
 - type: document
