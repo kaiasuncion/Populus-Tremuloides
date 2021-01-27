@@ -91,3 +91,5 @@ fields:
       format: markdown
   label: Full Description
   description: An in depth description of the product
+pages:
+- content/products/Things/benu-hexagon-c-fountain-pen.md
