@@ -69,18 +69,17 @@ fields:
   description: Does the product have varieties e.g. Color, Price, Material, Size,
     etc
 - name: tags
-  type: select
-  default: []
+  type: list
   config:
-    required: true
-    options: []
+    use_select: true
+    min: 
+    max: 
     source:
       type: documents
       section: tags
       file: content/data/Tags.json
       path: tag
   label: Tags
-  description: Select a tag or tags that can help the user filter for the product
 - name: full_description
   type: textarea
   default: ''
