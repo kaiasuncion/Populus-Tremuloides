@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="mode-wrapper">
     <ul>
       <li v-for="(mode, index) of modes" :key="mode + index">
         <component
           :is="`${mode}-icon`"
           v-show="$colorMode.preference === mode"
-          class="cursor-pointer"
+          class="icon-mode cursor-pointer"
           @click="selectColorMode()"
         />
       </li>
@@ -23,19 +23,17 @@
 import Vue from 'vue'
 import DarkIcon from '@/assets/icons/dark.svg?inline'
 import LightIcon from '@/assets/icons/light.svg?inline'
-import SepiaIcon from '@/assets/icons/sepia.svg?inline'
 import SystemIcon from '@/assets/icons/system.svg?inline'
 
 export default Vue.extend({
   components: {
     DarkIcon,
     LightIcon,
-    SepiaIcon,
     SystemIcon,
   },
   data() {
     return {
-      modes: ['system', 'dark', 'light', 'sepia'],
+      modes: ['system', 'dark', 'light'],
       currentIndex: 0,
     }
   },
@@ -50,8 +48,6 @@ export default Vue.extend({
         this.$colorMode.preference = 'dark'
       } else if (this.currentIndex === 2) {
         this.$colorMode.preference = 'light'
-      } else if (this.currentIndex === 3) {
-        this.$colorMode.preference = 'sepia'
       } else {
         this.currentIndex = 0
         this.$colorMode.preference = 'system'
@@ -62,9 +58,12 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-// changes icon color to mode primary type
-.icon-mode {
-  height: 2rem;
-  fill: var(--color-primary);
+.mode-wrapper {
+  padding: 0.5rem;
+  border-radius: 100%;
+  .icon-mode {
+    height: 3rem;
+    fill: var(--color-primary);
+  }
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <DarkMode />
     <AddToCart />
   </div>
 </template>

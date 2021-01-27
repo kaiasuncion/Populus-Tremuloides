@@ -1,6 +1,6 @@
 <template>
   <button
-    class="snipcart-add-item bg-green-700 p-2 rounded"
+    class="snipcart-add-item add-to-cart"
     data-item-id="1213"
     data-item-name="Test Name"
     data-item-price="2.5"

@@ -20,6 +20,6 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .error-wrapper {
-  @apply flex flex-col items-center justify-center;
+  margin: 0;
 }
 </style>

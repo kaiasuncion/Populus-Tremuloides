@@ -1,7 +1,7 @@
 <template>
-  <button class="snipcart-checkout flex items-center">
-    <span class="snipcart-total-price mr-2"></span>
-    <ShoppingCartIcon class="shopping-cart-icon h-8" />
+  <button class="snipcart-checkout">
+    <span class="snipcart-total-price"></span>
+    <ShoppingCartIcon class="shopping-cart-icon" />
   </button>
 </template>
 
@@ -17,6 +17,7 @@ export default Vue.extend({
 
 <style scoped>
 .shopping-cart-icon {
+  height: 4rem;
   fill: var(--color-primary);
 }
 </style>
