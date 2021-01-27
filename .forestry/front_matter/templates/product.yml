@@ -8,7 +8,7 @@ fields:
     required: true
   label: Name
   description: Name of the product
-- name: product_description
+- name: shot_description
   type: textarea
   default: ''
   config:
@@ -16,8 +16,8 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Product Description
-  description: Describe the product
+  label: Short Description
+  description: Short description
 - name: product_image
   type: file
   config:
@@ -55,6 +55,7 @@ fields:
   - name: required
     type: boolean
     label: Required
+    default: true
   - name: options
     type: text
     config:
@@ -71,7 +72,7 @@ fields:
   type: select
   default: []
   config:
-    required: false
+    required: true
     options: []
     source:
       type: documents
@@ -80,3 +81,13 @@ fields:
       path: tag
   label: Tags
   description: Select a tag or tags that can help the user filter for the product
+- name: full_description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Full Description
+  description: An in depth description of the product
