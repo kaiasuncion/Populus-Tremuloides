@@ -1,6 +1,8 @@
 ---
 product_price: 90.0
-tags: Lorem
+tags:
+- Lorem
+- Ipsum
 title: Benu Hexagon-C Fountain Pen
 shot_description: Benu fountain pen part of the Hexagon Collection
 product_image: "/uploads/benu.jpg"
