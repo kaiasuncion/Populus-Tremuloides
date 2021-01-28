@@ -1,6 +1,7 @@
 ---
 label: Product
-hide_body: true
+hide_body: false
+display_field: shot_description
 fields:
 - name: title
   type: text
@@ -80,15 +81,5 @@ fields:
       file: content/data/Tags.json
       path: tag
   label: Tags
-- name: full_description
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Full Description
-  description: An in depth description of the product
 pages:
 - content/products/Things/benu-hexagon-c-fountain-pen.md
