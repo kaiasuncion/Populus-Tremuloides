@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="h-screen">
+    <div>
       <div
         id="snipcart"
         data-config-modal-style="side"

@@ -1,6 +1,6 @@
 <template>
-  <div class="error-wrapper">
-    <h1 class="text-3xl">Error: {{ error.statusCode }}, {{ error.message }}</h1>
+  <div>
+    <h1>Error: {{ error.statusCode }}, {{ error.message }}</h1>
     <NuxtLink to="/">Return Home</NuxtLink>
   </div>
 </template>
@@ -17,9 +17,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style lang="scss" scoped>
-.error-wrapper {
-  margin: 0;
-}
-</style>

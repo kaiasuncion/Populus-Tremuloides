@@ -46,6 +46,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxtjs/svg',
+    '@nuxtjs/composition-api',
   ],
   privateRuntimeConfig: {
     apiSecret: process.env.API_SECRET,
@@ -55,7 +56,14 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
-
+  // testing generate
+  generate: {
+    async ready() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content().only(['slug']).fetch()
+      console.log(files)
+    },
+  },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 

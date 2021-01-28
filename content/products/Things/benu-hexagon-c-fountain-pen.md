@@ -14,16 +14,6 @@ custom_fields:
 - title: Filling Mechanism
   required: true
   options: Black Ink Cartridge | Converter[+5]
-full_description: |-
-  Graphic and flamboyant, the pens from the Hexagon collection features the pattern of nature’s most perfect six-sided polygon shapes. Aesthetically pleasing, balanced, and harmonious, with its seamless symmetry and balance, Hexagons are the true inspirations for those who prefer edgy geometry design. A striking contrast of the austere pattern and madly vivid color pallet complete the pens’ incomparable style.
-
-  * **Material:** high quality resin
-  * **Length Capped**: 14 cm / 5.5 inches
-  * **Weight**: 20 gr
-  * **Cap:** Screw On, the cap can be posted
-  * **Nib**: #5, Schmidt, stainless steel, available nib width - EF, F,M,B
-  * **Refill:** Standard large international size converter or ink cartridge (72 mm / 2.8 inches).
-
 ---
 Graphic and flamboyant, the pens from the Hexagon collection features the pattern of nature’s most perfect six-sided polygon shapes. Aesthetically pleasing, balanced, and harmonious, with its seamless symmetry and balance, Hexagons are the true inspirations for those who prefer edgy geometry design. A striking contrast of the austere pattern and madly vivid color pallet complete the pens’ incomparable style.
 
