@@ -15,9 +15,9 @@ Step Five: Deploy?
 
 This flow chart shows how the user will navigate the template. This flowchart also includes the dev experience of using Snipcart, e.g. data-items.
 
-![Flow Chart](/assets/mockUps/User__Dev_Flow_Chart.png)
+![Flow Chart](/assets/mock-ups/User__Dev_Flow_Chart.png)
 
 ### Template Mockup
 
-![Responsive Design Mock Up](/assets/mockUps/MockUp.jpg)
+![Responsive Design Mock Up](/assets/mock-ups/MockUp.jpg)
 [Prototype Mockup Credit](https://www.behance.net/gallery/53339171/iScreens-Free-Mock-up)
