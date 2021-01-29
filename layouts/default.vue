@@ -1,15 +1,13 @@
 <template>
   <div>
-    <div>
-      <div
-        id="snipcart"
-        data-config-modal-style="side"
-        :data-api-key="$config.apiSecret"
-        hidden
-      />
-      <ShoppingCart />
-      <Nuxt />
-    </div>
+    <div
+      id="snipcart"
+      data-config-modal-style="side"
+      :data-api-key="$config.apiSecret"
+      hidden
+    />
+    <Navigation />
+    <Nuxt class="pt-16" />
     <Email />
     <Footer />
   </div>

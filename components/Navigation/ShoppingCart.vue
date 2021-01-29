@@ -1,5 +1,5 @@
 <template>
-  <button class="snipcart-checkout">
+  <button class="snipcart-checkout shopping-cart">
     <span class="snipcart-total-price"></span>
     <ShoppingCartIcon class="shopping-cart-icon" />
   </button>
@@ -16,8 +16,15 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.shopping-cart {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+}
 .shopping-cart-icon {
-  height: 4rem;
+  height: 2rem;
   fill: var(--color-primary);
+  margin: 0 auto;
+  display: inline;
 }
 </style>

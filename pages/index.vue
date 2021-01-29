@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <AddToCart />
-  </div>
+  <div>Home Page</div>
 </template>
 
 <script lang="ts">

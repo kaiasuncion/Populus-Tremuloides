@@ -1,10 +1,6 @@
 <template>
   <div>
-    <img
-      :src="product[0].product_image"
-      :alt="product[0].title"
-      height="200px"
-    />
+    <img :src="product[0].product_image" :alt="product[0].title" />
     <h1>{{ product[0].title }}</h1>
     <p>{{ product[0].product_price }}</p>
     <nuxt-content :document="product[0]" />
