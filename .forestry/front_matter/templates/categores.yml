@@ -9,3 +9,5 @@ fields:
     use_select: false
   description: Categories are a collection of items in the same folder/ directory.
     More generic then tag/ filters e.g. Cat, Dogs, Fish, Birds
+pages:
+- content/data/Categories.json
