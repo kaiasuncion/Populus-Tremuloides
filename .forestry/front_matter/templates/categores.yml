@@ -8,4 +8,4 @@ fields:
   config:
     use_select: false
   description: Categories are a collection of items in the same folder/ directory.
-    More generic then tag/ filters
+    More generic then tag/ filters e.g. Cat, Dogs, Fish, Birds
