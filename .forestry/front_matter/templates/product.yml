@@ -82,5 +82,6 @@ fields:
       path: tag
   label: Tags
 pages:
+- content/products/That/fiddle-leaf-fig-leaf.md
 - content/products/These/cherry-barbs.md
 - content/products/Things/benu-hexagon-c-fountain-pen.md
