@@ -19,6 +19,10 @@ sections:
   path: content/data/HomePage.json
   label: Home Page
 - type: document
+  path: content/data/Categories.json
+  label: Categories
+  match: "**/*"
+- type: document
   path: content/data/Tags.json
   label: Tags
 upload_dir: static/uploads
