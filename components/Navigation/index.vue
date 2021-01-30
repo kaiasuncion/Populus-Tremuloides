@@ -16,8 +16,8 @@
       :class="menuOpen ? 'hamburger-open' : 'hamburger-closed'"
       class="nav-menu"
     >
-      <li>Item 1</li>
-      <li>Item 2</li>
+      <NuxtLink to="/"><li>Home</li></NuxtLink>
+      <NuxtLink to="/shop"><li>Shop</li></NuxtLink>
       <li>Item 3</li>
       <li>Item 4</li>
       <li>Item 5</li>
@@ -94,7 +94,7 @@ export default Vue.extend({
   z-index: 2;
 }
 .patty {
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .top-bun,
 .bottom-bun {
@@ -102,7 +102,7 @@ export default Vue.extend({
   position: absolute;
   width: 48px;
   height: 0.2rem;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 2;
 }
 .top-bun {
@@ -132,8 +132,9 @@ nav {
   position: fixed;
   transition: 0.4s ease-out;
   z-index: 1;
+  box-shadow: 0 0 0.5rem var(--shadow-color);
   &.navbar--hidden {
-    transform: translateY(-100%);
+    transform: translateY(-120%);
   }
   .brand-logo {
     height: 100%;
@@ -144,7 +145,7 @@ nav {
     right: -120%;
     top: 0;
     width: 90%;
-    max-width: 300px;
+    max-width: 500px;
     height: 100vh;
     z-index: 1;
     transition: ease-in-out 0.4s;

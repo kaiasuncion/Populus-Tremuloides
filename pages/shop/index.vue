@@ -1,5 +1,8 @@
 <template>
-  <div><Directory /></div>
+  <div>
+    <Categories />
+    <ShowAll />
+  </div>
 </template>
 
 <script lang="ts">
