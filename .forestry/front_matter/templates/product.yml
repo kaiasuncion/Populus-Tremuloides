@@ -81,3 +81,5 @@ fields:
       file: content/data/Tags.json
       path: tag
   label: Tags
+pages:
+- content/products/Flora/purple-flower.md
