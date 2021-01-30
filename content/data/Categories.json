@@ -8,9 +8,19 @@
   "description": "Select a category you would like to shop by. e.g. Cats or Dogs || Brand || Cameras or Lens || Brownies or Cookies || Coffee or Tea || etc.",
   "category": [
     {
+      "title": "Flora",
+      "image": "/uploads/flower01.jpg",
+      "path": "Flora"
+    },
+    {
+      "title": "Fish",
+      "image": "/uploads/fish00.jpg",
+      "path": "Fish"
+    },
+    {
       "title": "Handsome Collection",
       "image": "/uploads/biki_bikes.jpg",
-      "path": "Things"
+      "path": "Handsome Collection"
     }
   ]
 }
