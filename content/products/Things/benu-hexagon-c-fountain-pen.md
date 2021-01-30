@@ -1,12 +1,12 @@
 ---
-product_price: 90.0
+product_price: 90
 tags:
 - Lorem
 - Ipsum
 title: Benu Hexagon-C Fountain Pen
 shot_description: Benu fountain pen part of the Hexagon Collection
 product_image: "/uploads/benu.jpg"
-date_added: 2021-01-27T16:00:00Z
+date_added: 2021-01-27T16:00:00.000+00:00
 custom_fields:
 - title: Nib Size
   required: true
@@ -14,6 +14,8 @@ custom_fields:
 - title: Filling Mechanism
   required: true
   options: Black Ink Cartridge | Converter[+5]
+short_description: Benu fountain pen part of the Hexagon Collection
+
 ---
 Graphic and flamboyant, the pens from the Hexagon collection features the pattern of nature’s most perfect six-sided polygon shapes. Aesthetically pleasing, balanced, and harmonious, with its seamless symmetry and balance, Hexagons are the true inspirations for those who prefer edgy geometry design. A striking contrast of the austere pattern and madly vivid color pallet complete the pens’ incomparable style.
 
