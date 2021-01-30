@@ -2,12 +2,45 @@
 label: Categores
 hide_body: true
 fields:
-- type: list
-  name: categories
-  label: Categories
+- name: heading
+  type: text
   config:
-    use_select: false
-  description: Categories are a collection of items in the same folder/ directory.
-    More generic then tag/ filters e.g. Cat, Dogs, Fish, Birds
+    required: false
+  label: Heading
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+- name: category
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    description: Category title
+    label: Title
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: path
+    type: text
+    config:
+      required: false
+    label: Path
+    description: populous-tremuloides/shop/categories/${category name}
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Category
+  description: Category container for name, image, path
 pages:
 - content/data/Categories.json
