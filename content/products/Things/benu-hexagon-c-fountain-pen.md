@@ -4,7 +4,6 @@ tags:
 - Lorem
 - Ipsum
 title: Benu Hexagon-C Fountain Pen
-shot_description: Benu fountain pen part of the Hexagon Collection
 product_image: "/uploads/benu.jpg"
 date_added: 2021-01-27T16:00:00.000+00:00
 custom_fields:

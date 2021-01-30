@@ -64,6 +64,7 @@ export default {
       console.log(files)
     },
   },
+  loading: { color: 'blue', height: '5px' },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
