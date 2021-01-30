@@ -3,5 +3,9 @@ label: Categores
 hide_body: true
 fields:
 - type: list
-  name: tag
-  label: tag
+  name: categories
+  label: Categories
+  config:
+    use_select: false
+  description: Categories are a collection of items in the same folder/ directory.
+    More generic then tag/ filters
