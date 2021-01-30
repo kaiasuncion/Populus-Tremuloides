@@ -1,0 +1,7 @@
+---
+label: Categores
+hide_body: true
+fields:
+- type: list
+  name: tag
+  label: tag

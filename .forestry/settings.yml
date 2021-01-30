@@ -21,7 +21,6 @@ sections:
 - type: document
   path: content/data/Categories.json
   label: Categories
-  match: "**/*"
 - type: document
   path: content/data/Tags.json
   label: Tags
