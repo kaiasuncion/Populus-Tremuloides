@@ -81,6 +81,3 @@ fields:
       file: content/data/Tags.json
       path: tag
   label: Tags
-pages:
-- content/products/Flora/purple-flower.md
-- content/products/Handsome Collection/Sub-Directory/deep-fish.md
