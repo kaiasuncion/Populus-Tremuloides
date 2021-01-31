@@ -1,12 +1,13 @@
 ---
-product_price: 10.0
+product_price: 10
 title: Fiddle Leaf Fig Leaf
 short_description: Just a leaf of a Fiddle Fig
 product_image: "/uploads/plant00.jpg"
-date_added: 2021-01-30T03:00:00Z
+date_added: 2021-01-30T03:00:00.000+00:00
 custom_fields: []
 tags:
 - Ipsum
+product_id: fiddle-leaf-fig-leaf
 
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dapibus dolor non neque sollicitudin sodales. Nam rutrum erat vel nisl finibus tristique. Nam sed posuere orci. Donec non mi sed ex maximus pretium. Aenean a velit et nibh luctus maximus. Aliquam sollicitudin aliquam ultricies. Sed nec est luctus, iaculis ante ut, ornare odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam mattis, nulla vitae semper vehicula, risus dui egestas eros, eu blandit eros augue sit amet felis. Maecenas eget venenatis magna. Maecenas vehicula est at bibendum lacinia. Etiam iaculis orci sit amet leo ullamcorper finibus. Aenean in est vel nisl mollis tristique. Vestibulum vitae libero id massa dictum imperdiet sit amet vitae nulla. Nulla vitae tincidunt velit, ut suscipit sapien. Proin eros lectus, porta tristique mi id, laoreet aliquam neque.
