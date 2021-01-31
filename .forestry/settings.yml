@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: Products
 - type: directory
-  path: content/categories
+  path: content/products
   label: Categories
   create: all
   match: "**/*"
