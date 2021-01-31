@@ -1,12 +1,13 @@
 ---
-product_price: 30.0
+product_price: 30
 title: Deep Fish
 short_description: This is a file in a sub directory
 product_image: "/uploads/fish00.jpg"
-date_added: 2021-01-31T00:00:00Z
+date_added: 2021-01-31T00:00:00.000+00:00
 custom_fields: []
 tags:
 - Sit Amet
+product_id: deep-fish
 
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent diam lacus, tincidunt sit amet mattis vitae, varius non massa. Duis varius feugiat pellentesque. Integer posuere lectus lorem, ut interdum orci consectetur in. Morbi accumsan diam nec ultrices rutrum. Maecenas nec rhoncus sem, id bibendum elit. Praesent pellentesque vel urna eget auctor. Sed a pharetra tellus.
