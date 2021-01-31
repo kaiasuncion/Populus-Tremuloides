@@ -16,8 +16,8 @@
       :class="menuOpen ? 'hamburger-open' : 'hamburger-closed'"
       class="nav-menu"
     >
-      <NuxtLink to="/"><li>Home</li></NuxtLink>
-      <NuxtLink to="/shop"><li>Shop</li></NuxtLink>
+      <li><NuxtLink to="/">Home</NuxtLink></li>
+      <li><NuxtLink to="/shop">Shop</NuxtLink></li>
       <li>Item 3</li>
       <li>Item 4</li>
       <li>Item 5</li>

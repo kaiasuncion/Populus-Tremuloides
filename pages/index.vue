@@ -1,5 +1,8 @@
 <template>
-  <div>Home Page</div>
+  <div>
+    <div>Home Page</div>
+    <NuxtLink to="/products/Flora/purple-flower">TEST</NuxtLink>
+  </div>
 </template>
 
 <script lang="ts">

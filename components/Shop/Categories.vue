@@ -4,10 +4,8 @@
       <h1>{{ categories.heading }}</h1>
       <p>{{ categories.description }}</p>
     </div>
-    <div
-      v-for="category in categories.category"
-      :key="category + categories.index"
-    >
+    <div v-for="category in categories.category" :key="category.slug">
+      {{ category.slug }}
       <NuxtLink :to="'shop/categories/' + category.path">
         <h1>{{ category.title }}</h1>
         <p>{{ category.path }}</p>
