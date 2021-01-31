@@ -9,6 +9,11 @@ fields:
     required: true
   label: Name
   description: Name of the product
+- name: product_id
+  type: text
+  config:
+    required: true
+  label: Product ID
 - name: short_description
   type: textarea
   default: ''
