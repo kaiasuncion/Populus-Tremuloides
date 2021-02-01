@@ -8,7 +8,7 @@ sections:
   label: Products
 - type: directory
   path: content/products
-  label: Categories
+  label: Products
   create: all
   match: "**/*"
   templates:
