@@ -5,9 +5,9 @@
   --color-secondary: #333;
   --bg: #fff;
   --bg-secondary: #fff;
-  --border-color: #ddd;
-  --button-color: pink;
-  --button-text: black;
+  --border-color: #000;
+  --button-color: crimson;
+  --button-text: white;
   --shadow-color: black;
 }
 .dark-mode {
@@ -16,14 +16,12 @@
   --color-secondary: #c3c3c3;
   --bg: #071521;
   --bg-secondary: #1a202c;
-  --border-color: #0d2538;
 }
 .light-mode {
   --color: #0f0f0f;
   --color-secondary: #1a1a1a;
   --bg: #fff;
   --bg-secondary: #e2e2e2;
-  --border-color: #dadada;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -65,4 +63,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 .border-mode {
   border-color: var(--border-color);
+}
+.bottom-border {
+  border-bottom: 0.25rem solid var(--border-color);
+}
+// Nuxt Content styles
+.nuxt-content {
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+  margin: 2rem;
 }

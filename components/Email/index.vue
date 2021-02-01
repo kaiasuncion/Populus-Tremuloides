@@ -27,6 +27,7 @@
   align-items: center;
   background-color: var(--bg-secondary);
   padding: 4rem;
+  border-bottom: 0.25rem solid var(--border-color);
   .news-letter-wrapper {
     max-width: 500px;
     .news-letter-heading {

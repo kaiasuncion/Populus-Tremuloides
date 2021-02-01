@@ -1,6 +1,8 @@
 <template>
   <nav :class="{ 'navbar--hidden': !showNavBar }">
-    <Logo class="brand-logo" />
+    <NuxtLink class="brand-logo" to="/">
+      <Logo class="brand-logo" />
+    </NuxtLink>
     <ShoppingCart class="" />
     <button
       aria-label="menu button"
@@ -16,8 +18,8 @@
       :class="menuOpen ? 'hamburger-open' : 'hamburger-closed'"
       class="nav-menu"
     >
-      <li><NuxtLink to="/">Home</NuxtLink></li>
-      <li><NuxtLink to="/shop">Shop</NuxtLink></li>
+      <NuxtLink to="/"><li @click="isMenuOpen()">Home</li></NuxtLink>
+      <NuxtLink to="/shop"><li @click="isMenuOpen()">Shop</li></NuxtLink>
       <li>Item 3</li>
       <li>Item 4</li>
       <li>Item 5</li>
@@ -132,7 +134,7 @@ nav {
   position: fixed;
   transition: 0.4s ease-out;
   z-index: 1;
-  box-shadow: 0 0 0.5rem var(--shadow-color);
+  box-shadow: 0 0.25rem var(--shadow-color);
   &.navbar--hidden {
     transform: translateY(-120%);
   }

@@ -17,7 +17,6 @@ footer {
   align-items: center;
   transition: background-color 0.3s;
   padding: 2rem 0;
-  box-shadow: 0 0 0.25rem var(--shadow-color);
   .footer-heading {
     font-size: 2rem;
     margin-bottom: 0.5rem;
