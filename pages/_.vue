@@ -1,6 +1,6 @@
 <template>
   <div class="product-container">
-    <img :src="product.product_image" :alt="product.title" />
+    <ProductGallery :images="product.image_gallery" />
     <div class="product-details">
       <div class="shop-container">
         <h1>{{ product.title }}</h1>
@@ -16,13 +16,6 @@
         <!-- update item before adding to cart -->
         <div class="custom-fields-container">
           <!-- if custom fields -->
-          <div>
-            <ul>
-              <li v-for="field in product.custom_fields" :key="field.title">
-                {{ field.title }} {{ field.required }} {{ field.options }}
-              </li>
-            </ul>
-          </div>
           <!-- quantity -->
           <label for="quantity">Quantity</label>
           <div class="quantity-container">
@@ -44,14 +37,15 @@
               @click="increment()"
             ></button>
           </div>
-          <p>
+          <!-- if you want to display price on page -->
+          <!-- <p>
             {{
               Intl.NumberFormat('en', {
                 style: 'currency',
                 currency: 'USD',
               }).format(quantity.value * product.product_price)
             }}
-          </p>
+          </p> -->
         </div>
         <button
           aria-label="Add to cart"
@@ -67,9 +61,6 @@
         >
           Add to Cart
         </button>
-        <p>{{ customFields }}</p>
-        <hr />
-        <p>{{ product.custom_fields }}</p>
       </div>
       <nuxt-content :document="product" />
     </div>
@@ -105,8 +96,44 @@ export default {
       },
     }
   },
+  head() {
+    return {
+      title: 'Populus Tremuloides - ' + this.product.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.product.short_description,
+        },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: this.product.title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.product.short_description,
+        },
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.product.title,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.product.short_description,
+        },
+      ],
+    }
+  },
   computed: {
     customFields() {
+      if (
+        this.product.custom_fields === undefined ||
+        this.product.custom_fields.length === 0
+      ) {
+        return
+      }
       return this.product.custom_fields
         .map(({ title, required, options }) => ({
           name: title,
@@ -142,7 +169,8 @@ export default {
   margin-top: 1rem;
 }
 .quantity-container {
-  margin: 0 auto 1rem auto;
+  position: relative;
+  margin: 0 auto 2rem auto;
   width: 120px;
   display: flex;
   flex-flow: row nowrap;
@@ -211,6 +239,16 @@ input[type='number'] {
   @screen md {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-height: 90vh;
+    .product-details {
+      overflow: scroll;
+      max-height: 80vh;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
   @screen lg {
     grid-template-columns: 2fr 1fr;
@@ -240,7 +278,7 @@ input[type='number'] {
     display: block;
     background-color: var(--button-color);
     color: var(--button-text);
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 1rem auto;
     border-radius: 0.5rem;
     padding: 1rem;
   }
