@@ -15,6 +15,10 @@ custom_fields:
   options: Black Ink Cartridge | Converter[+5]
 short_description: Benu fountain pen part of the Hexagon Collection
 product_id: benu-hex-c
+image_gallery:
+- "/uploads/pen06.jpg"
+- "/uploads/benu.jpg"
+- "/uploads/pen04.jpg"
 
 ---
 Graphic and flamboyant, the pens from the Hexagon collection features the pattern of nature’s most perfect six-sided polygon shapes. Aesthetically pleasing, balanced, and harmonious, with its seamless symmetry and balance, Hexagons are the true inspirations for those who prefer edgy geometry design. A striking contrast of the austere pattern and madly vivid color pallet complete the pens’ incomparable style.
