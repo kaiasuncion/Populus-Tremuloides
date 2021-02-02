@@ -2,13 +2,7 @@
   <div class="product-container">
     <img :src="product.product_image" :alt="product.title" />
     <div class="product-details">
-      {{ customFields }}
-      <!-- <ul>
-        <li v-for="custom in product.custom_fields" :key="custom.title">
-          {{custom.title}}
-        </li>
-      </ul> -->
-      <div class="bottom-border">
+      <div class="shop-container">
         <h1>{{ product.title }}</h1>
         <p class="short-description">{{ product.short_description }}</p>
         <p class="product-price">
@@ -19,6 +13,46 @@
             }).format(product.product_price)
           }}
         </p>
+        <!-- update item before adding to cart -->
+        <div class="custom-fields-container">
+          <!-- if custom fields -->
+          <div>
+            <ul>
+              <li v-for="field in product.custom_fields" :key="field.title">
+                {{ field.title }} {{ field.required }} {{ field.options }}
+              </li>
+            </ul>
+          </div>
+          <!-- quantity -->
+          <label for="quantity">Quantity</label>
+          <div class="quantity-container">
+            <button
+              aria-label="Decrement button"
+              class="quantity-buttons decrement-button"
+              @click="decrement()"
+            ></button>
+            <input
+              id="quantity"
+              v-model="quantity.value"
+              type="number"
+              min="1"
+              value="1"
+            />
+            <button
+              aria-label="Increment button"
+              class="quantity-buttons increment-button"
+              @click="increment()"
+            ></button>
+          </div>
+          <p>
+            {{
+              Intl.NumberFormat('en', {
+                style: 'currency',
+                currency: 'USD',
+              }).format(quantity.value * product.product_price)
+            }}
+          </p>
+        </div>
         <button
           aria-label="Add to cart"
           class="snipcart-add-item add-to-cart"
@@ -28,17 +62,21 @@
           :data-item-url="`${$config.baseUrl}${path}`"
           :data-item-description="product.short_description"
           :data-item-image="product.product_image"
+          :data-item-quantity="`${quantity.value}`"
           v-bind="customFields"
         >
           Add to Cart
         </button>
+        <p>{{ customFields }}</p>
+        <hr />
+        <p>{{ product.custom_fields }}</p>
       </div>
       <nuxt-content :document="product" />
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   async asyncData({ $content, params, error }) {
     const path = `/${params.pathMatch || 'index'}`
@@ -52,6 +90,21 @@ export default {
       path,
     }
   },
+  data() {
+    return {
+      quantity: {
+        type: Number,
+        value: 1,
+      },
+      decrement() {
+        if (this.quantity.value === 1) return
+        this.quantity.value--
+      },
+      increment() {
+        this.quantity.value++
+      },
+    }
+  },
   computed: {
     customFields() {
       return this.product.custom_fields
@@ -60,21 +113,99 @@ export default {
           required,
           options,
         }))
-        .map((x, index) =>
-          Object.entries(x).map(([key, value]) => ({
-            [`data-item-custom${
-              index + 1
-            }-${key.toString().toLowerCase()}`]: value,
-          }))
+        .map(
+          (x: { [s: string]: unknown } | ArrayLike<unknown>, index: number) =>
+            Object.entries(x).map(([key, value]) => ({
+              [`data-item-custom${
+                index + 1
+              }-${key.toString().toLowerCase()}`]: value,
+            }))
         )
-        .reduce((acc, curr) => acc.concat(curr), [])
-        .reduce((acc, curr) => ({ ...acc, ...curr }))
+        .reduce((acc: string | any[], curr: any) => acc.concat(curr), [])
+        .reduce((acc: any, curr: any) => ({ ...acc, ...curr }))
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.shop-container {
+  margin: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.custom-fields-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+.quantity-container {
+  margin: 0 auto 1rem auto;
+  width: 120px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color-secondary);
+  .quantity-buttons {
+    width: 2rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .decrement-button {
+    border-right: 1px solid var(--border-color-secondary);
+    &.decrement-button::before {
+      content: '';
+      height: 2px;
+      width: 20px;
+      display: block;
+      background-color: var(--color);
+    }
+  }
+  .increment-button {
+    border-left: 1px solid var(--border-color-secondary);
+    &.increment-button::before,
+    .increment-button::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      display: block;
+      background-color: var(--color);
+    }
+  }
+  .increment-button::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    display: block;
+    background-color: var(--color);
+    transform: rotate(90deg);
+  }
+}
+input {
+  width: 3rem;
+  height: 2rem;
+  padding: 0.25rem;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: var(--bg);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
 .product-container {
   border-block: 0.25rem solid var(--border-color);
   @screen md {
@@ -88,7 +219,6 @@ export default {
     object-fit: cover;
     height: 100%;
     width: 100%;
-    max-height: 70vh;
     border-bottom: 0.25rem solid var(--border-color);
     @screen md {
       border-right: 0.25rem solid var(--border-color);
@@ -96,13 +226,9 @@ export default {
     }
   }
   h1 {
-    text-align: center;
     font-size: 2rem;
-    margin: 2rem;
   }
   p {
-    text-align: center;
-    margin: 2rem;
     &.short-description {
       font-size: 1.25rem;
     }

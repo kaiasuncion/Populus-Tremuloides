@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import ShoppingCartIcon from '@/assets/icons/shopping-cart.svg?inline'
+import ShoppingCartIcon from '@/assets/icons/shopping-cart-blocky.svg?inline'
 export default Vue.extend({
   components: {
     ShoppingCartIcon,
@@ -26,5 +26,13 @@ export default Vue.extend({
   fill: var(--color-primary);
   margin: 0 auto;
   display: inline;
+}
+
+/* cheap fix */
+.st0 {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
 }
 </style>

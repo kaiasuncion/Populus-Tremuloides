@@ -1,3 +1,4 @@
+@import './content/content.scss';
 // color modes
 :root {
   --color: #333;
@@ -6,6 +7,7 @@
   --bg: #fff;
   --bg-secondary: #fff;
   --border-color: #000;
+  --border-color-secondary: #a7a7a7;
   --button-color: crimson;
   --button-text: white;
   --shadow-color: black;
@@ -19,6 +21,7 @@
 }
 .light-mode {
   --color: #0f0f0f;
+  --color-primary: #333;
   --color-secondary: #1a1a1a;
   --bg: #fff;
   --bg-secondary: #e2e2e2;
@@ -66,10 +69,4 @@ h1,h2,h3,h4,h5,h6 {
 }
 .bottom-border {
   border-bottom: 0.25rem solid var(--border-color);
-}
-// Nuxt Content styles
-.nuxt-content {
-  font-size: 1.1rem;
-  line-height: 1.9rem;
-  margin: 2rem;
 }
