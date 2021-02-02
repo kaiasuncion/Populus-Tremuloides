@@ -28,8 +28,13 @@ fields:
   type: file
   config:
     maxSize: 64
-  label: Product Image
-  description: This is the product that will appear on the page
+  label: Thumbnail
+  description: Thumbnail for when showing up in lists and the cart
+- name: image_gallery
+  type: image_gallery
+  config: {}
+  label: Image Gallery
+  description: A collection of images for the product
 - name: date_added
   type: datetime
   description: Select the date this product is added
