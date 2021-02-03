@@ -15,7 +15,10 @@
   --border-color-secondary: #a7a7a7;
   --button-color: crimson;
   --button-text: white;
+  --button-hover: rgb(161, 20, 49);
   --shadow-color: black;
+  --overlay-color: hsla(0, 0%, 10%, 0.85);
+  --overlay-color-hover: rgba(75, 75, 75, 0.3);
 }
 .dark-mode {
   --color: #fdfdfd;
@@ -77,4 +80,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 .bottom-border {
   border-bottom: 0.25rem solid var(--border-color);
+}
+.main-button {
+  display: block;
+  padding: 1rem 2rem;
+  background: var(--button-color);
+  color: var(--button-text);
+  border-radius: 0.5rem;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--button-hover);
+  }
 }

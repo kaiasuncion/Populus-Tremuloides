@@ -4,6 +4,7 @@
       <div class="hero-text">
         <h1>{{ homeContent.heading }}</h1>
         <p>{{ homeContent.paragraph01 }}</p>
+        <button class="main-button">Shop</button>
       </div>
       <img :src="homeContent.hero_image" alt="hero image" />
     </div>
@@ -37,6 +38,7 @@
         </p>
       </div>
     </div>
+    <Banner />
     <Featured />
     <div class="section-three">
       <div class="section-three-wrapper">

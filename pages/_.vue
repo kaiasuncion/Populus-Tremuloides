@@ -280,7 +280,7 @@ input[type='number'] {
     color: var(--button-text);
     margin: 0 auto 1rem auto;
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
   }
 }
 </style>

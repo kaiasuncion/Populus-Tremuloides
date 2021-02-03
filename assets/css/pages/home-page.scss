@@ -14,9 +14,12 @@
     width: 100%;
     position: absolute;
     padding: 1rem;
-    background-color: hsla(0, 0%, 10%, 0.85);
+    background-color: var(--overlay-color);
     border-top: 0.25rem solid var(--border-color);
     border-bottom: 0.25rem solid var(--border-color);
+    .hero-wrapper {
+      position: relative;
+    }
     @screen sm {
       padding: 2rem;
     }
@@ -44,6 +47,9 @@
     @screen lg {
       color: var(--color);
     }
+  }
+  .main-button {
+    margin: 1rem auto;
   }
   img {
     min-height: 70vh;
