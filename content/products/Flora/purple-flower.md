@@ -6,6 +6,7 @@ product_image: "/uploads/flower03.jpg"
 date_added: 2021-01-30T21:00:00.000+00:00
 custom_fields: []
 tags:
+- Best Seller
 - Ipsum
 product_id: purple-flower
 
