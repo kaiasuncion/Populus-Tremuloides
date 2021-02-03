@@ -59,3 +59,5 @@ fields:
     maxSize: 64
   label: Image03
   description: This is the last image on the home page
+pages:
+- content/data/HomePage.json
