@@ -6,6 +6,7 @@ product_image: "/uploads/plant00.jpg"
 date_added: 2021-01-30T03:00:00.000+00:00
 custom_fields: []
 tags:
+- Featured
 - Best Seller
 product_id: fiddle-leaf-fig-leaf
 

@@ -1,6 +1,7 @@
 ---
 product_price: 90
 tags:
+- Featured
 - Best Seller
 - Lorem
 - Ipsum
