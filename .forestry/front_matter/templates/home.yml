@@ -1,4 +1,61 @@
 ---
 label: Home
 hide_body: true
-fields: []
+fields:
+- name: heading
+  type: text
+  config:
+    required: true
+  label: Heading
+- name: paragraph01
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Paragraph01
+  description: This is the paragraph that appears above the crease
+- name: hero_image
+  type: file
+  config:
+    maxSize: 64
+  label: Hero Image
+  description: This image appears above the crease
+- name: paragraph02
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Paragraph02
+  description: This paragraph directly below the crease
+- name: image02
+  type: file
+  config:
+    maxSize: 64
+  label: Image02
+  description: This image shows up directly below the crease
+- name: home_gallery
+  type: image_gallery
+  config: {}
+  label: Home Gallery
+- name: paragraph03
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  description: This is the last paragraph on the home page
+  label: Paragraph03
+- name: image03
+  type: file
+  config:
+    maxSize: 64
+  label: Image03
+  description: This is the last image on the home page
