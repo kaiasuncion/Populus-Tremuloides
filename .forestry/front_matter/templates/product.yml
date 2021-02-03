@@ -91,3 +91,5 @@ fields:
       file: content/data/Tags.json
       path: tag
   label: Tags
+pages:
+- content/products/h2-oh.md
