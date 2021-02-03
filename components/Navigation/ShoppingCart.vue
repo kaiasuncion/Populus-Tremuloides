@@ -31,7 +31,7 @@ export default Vue.extend({
 /* cheap fix */
 .st0 {
   fill: none;
-  stroke: #000;
+  stroke: var(--color);
   stroke-width: 3;
   stroke-miterlimit: 10;
 }

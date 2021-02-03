@@ -28,6 +28,7 @@
   background-color: var(--bg-secondary);
   padding: 4rem;
   border-bottom: 0.25rem solid var(--border-color);
+  box-shadow: 0 -0.25rem var(--border-color);
   .news-letter-wrapper {
     max-width: 500px;
     .news-letter-heading {

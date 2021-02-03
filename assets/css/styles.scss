@@ -1,4 +1,9 @@
+// Nuxt-Content
 @import './content/content.scss';
+// Home Page
+@import './pages/home-page.scss';
+// Navigation Component
+@import './components/navigation.scss';
 // color modes
 :root {
   --color: #333;
@@ -38,6 +43,9 @@ body {
 }
 a {
   color: var(--color-primary);
+}
+p {
+  font-size: 1.25rem;
 }
 button {
   color: var(--color);

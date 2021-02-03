@@ -7,6 +7,7 @@
       </div>
       <img :src="homeContent.hero_image" alt="hero image" />
     </div>
+    <Recent />
     <div class="section-two">
       <div class="block-wrapper">
         <h2>Lorem Ipsum</h2>
@@ -36,13 +37,8 @@
         </p>
       </div>
     </div>
-    <ul class="gallery-wrapper">
-      <li v-for="image in homeContent.home_gallery" :key="image">
-        <img :src="image" alt="Gallery image" />
-      </li>
-    </ul>
+    <Featured />
     <div class="section-three">
-      <img :src="homeContent.image03" alt="image03" />
       <div class="section-three-wrapper">
         <h3>Lorem Ipsum</h3>
         <p>
@@ -68,7 +64,15 @@
           vestibulum accumsan quam, fermentum luctus massa faucibus at.
         </p>
       </div>
+      <div class="gallery-container">
+        <ul class="gallery-wrapper">
+          <li v-for="image in homeContent.home_gallery" :key="image">
+            <img :src="image" alt="Gallery image" />
+          </li>
+        </ul>
+      </div>
     </div>
+    <BestSellers />
   </div>
 </template>
 
@@ -87,121 +91,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss" scoped>
-p {
-  font-size: 1.25rem;
-}
-.hero-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
-  @screen lg {
-    flex-direction: row;
-    img {
-      width: 50vw;
-    }
-  }
-  .hero-text {
-    width: 100%;
-    position: absolute;
-    padding: 1rem;
-    background-color: hsla(0, 0%, 10%, 0.85);
-    border-top: 0.25rem solid var(--border-color);
-    border-bottom: 0.25rem solid var(--border-color);
-    @screen sm {
-      padding: 2rem;
-    }
-    @screen lg {
-      position: relative;
-      width: 50vw;
-      background-color: var(--bg);
-      padding: 2rem;
-    }
-  }
-  h1 {
-    max-width: 450px;
-    margin: auto;
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    @screen lg {
-      color: var(--color);
-    }
-  }
-  p {
-    color: white;
-    margin: auto;
-    max-width: 450px;
-    @screen lg {
-      color: var(--color);
-    }
-  }
-  img {
-    min-height: 70vh;
-    object-fit: cover;
-    z-index: -1;
-    border-bottom: 0.25rem solid var(--border-color);
-    @screen lg {
-      border-left: 0.25rem solid var(--border-color);
-    }
-  }
-}
-.section-two {
-  padding: 2rem;
-  border-bottom: 0.25rem solid var(--border-color);
-  @screen lg {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .block-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    border: 0.25rem solid var(--border-color);
-    h2 {
-      font-size: 2rem;
-    }
-    @screen lg {
-      max-width: 28vw;
-      height: 500px;
-    }
-  }
-}
-.gallery-wrapper {
-  background-color: var(--border-color);
-  columns: 2;
-  gap: 0.25rem;
-  @screen lg {
-    columns: 4;
-  }
-  img {
-    border-bottom: 0.25rem solid var(--border-color);
-  }
-}
-.section-three {
-  height: 100%;
-  border-bottom: 0.25rem solid var(--border-color);
-  @screen md {
-    display: flex;
-  }
-  img {
-    object-fit: cover;
-    @screen md {
-      width: 50vw;
-    }
-  }
-  .section-three-wrapper {
-    padding: 2rem;
-    h3 {
-      font-size: 2rem;
-    }
-  }
-}
-</style>

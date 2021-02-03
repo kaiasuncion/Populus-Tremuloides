@@ -1,0 +1,127 @@
+.hero-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  @screen lg {
+    flex-direction: row;
+    img {
+      width: 50vw;
+    }
+  }
+  .hero-text {
+    width: 100%;
+    position: absolute;
+    padding: 1rem;
+    background-color: hsla(0, 0%, 10%, 0.85);
+    border-top: 0.25rem solid var(--border-color);
+    border-bottom: 0.25rem solid var(--border-color);
+    @screen sm {
+      padding: 2rem;
+    }
+    @screen lg {
+      position: relative;
+      width: 50vw;
+      background-color: var(--bg);
+      padding: 2rem;
+    }
+  }
+  h1 {
+    max-width: 450px;
+    margin: auto;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    @screen lg {
+      color: var(--color);
+    }
+  }
+  p {
+    color: white;
+    margin: auto;
+    max-width: 450px;
+    @screen lg {
+      color: var(--color);
+    }
+  }
+  img {
+    min-height: 70vh;
+    object-fit: cover;
+    z-index: -1;
+    border-bottom: 0.25rem solid var(--border-color);
+    @screen lg {
+      border-left: 0.25rem solid var(--border-color);
+    }
+  }
+}
+.section-two {
+  padding: 2rem;
+  @screen lg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .block-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border: 0.25rem solid var(--border-color);
+    h2 {
+      font-size: 2rem;
+    }
+    @screen lg {
+      max-width: 28vw;
+      height: 500px;
+    }
+  }
+}
+.section-three {
+  border-top: 0.25rem solid var(--border-color);
+  border-bottom: 0.25rem solid var(--border-color);
+  @screen md {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .gallery-container {
+    border-top: 0.25rem solid var(--border-color);
+    @screen md {
+      border-top: none;
+      border-right: 0.25rem solid var(--border-color);
+      width: 50%;
+    }
+    @screen xl {
+      height: 80vh;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .gallery-wrapper {
+      background-color: var(--border-color);
+      columns: 2;
+      gap: 0.25rem;
+      @screen lg {
+        columns: 2;
+      }
+      img {
+        border-bottom: 0.25rem solid var(--border-color);
+      }
+    }
+  }
+  .section-three-wrapper {
+    padding: 2rem;
+    margin: auto;
+    @screen md {
+      width: 50%;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+  }
+}
