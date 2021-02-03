@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 70vh;
+  margin-bottom: 4rem;
   @screen lg {
     flex-direction: row;
     img {
@@ -80,7 +81,7 @@
       font-size: 2rem;
     }
     @screen lg {
-      max-width: 28vw;
+      max-width: 30vw;
       height: 500px;
     }
   }
