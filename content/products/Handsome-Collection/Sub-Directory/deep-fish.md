@@ -6,6 +6,7 @@ product_image: "/uploads/fish00.jpg"
 date_added: 2021-01-31T00:00:00.000+00:00
 custom_fields: []
 tags:
+- Featured
 - Sit Amet
 product_id: deep-fish
 
