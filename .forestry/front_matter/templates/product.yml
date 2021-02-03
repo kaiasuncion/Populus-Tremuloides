@@ -27,7 +27,7 @@ fields:
 - name: product_image
   type: file
   config:
-    maxSize: 64
+    maxSize: 10
   label: Thumbnail
   description: Thumbnail for when showing up in lists and the cart
 - name: image_gallery
