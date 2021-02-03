@@ -11,7 +11,7 @@ fields:
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: true
     schema:
       format: markdown
@@ -27,8 +27,8 @@ fields:
   type: textarea
   default: ''
   config:
-    required: false
-    wysiwyg: false
+    required: true
+    wysiwyg: true
     schema:
       format: markdown
   label: Paragraph02
@@ -47,8 +47,8 @@ fields:
   type: textarea
   default: ''
   config:
-    required: false
-    wysiwyg: false
+    required: true
+    wysiwyg: true
     schema:
       format: markdown
   description: This is the last paragraph on the home page
