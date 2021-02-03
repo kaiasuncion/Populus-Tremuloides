@@ -6,6 +6,7 @@ product_image: "/uploads/_mg_6670.jpg"
 date_added: 2021-01-30T02:00:00.000+00:00
 custom_fields: []
 tags:
+- Best Seller
 - Dolar
 product_id: cherry-barbs
 
