@@ -177,12 +177,12 @@ p {
 .gallery-wrapper {
   background-color: var(--border-color);
   columns: 2;
-  gap: 0;
+  gap: 0.25rem;
   @screen lg {
     columns: 4;
   }
   img {
-    border: 0.25rem solid var(--border-color);
+    border-bottom: 0.25rem solid var(--border-color);
   }
 }
 .section-three {
