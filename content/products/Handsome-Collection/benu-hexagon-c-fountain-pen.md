@@ -1,6 +1,7 @@
 ---
 product_price: 90
 tags:
+- Best Seller
 - Lorem
 - Ipsum
 title: Benu Hexagon-C Fountain Pen
