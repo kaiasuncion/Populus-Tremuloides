@@ -20,7 +20,7 @@ sections:
   label: Home Page
 - type: document
   path: content/data/Categories.json
-  label: categories
+  label: Categories
 - type: document
   path: content/data/Tags.json
   label: Tags
