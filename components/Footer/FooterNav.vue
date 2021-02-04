@@ -1,8 +1,8 @@
 <template>
   <div class="footer-list-container">
     <ul class="footer-list">
-      <a>Lorem</a>
-      <a>Ipsum</a>
+      <NuxtLink to="/">Home</NuxtLink>
+      <NuxtLink to="/shop">Shop</NuxtLink>
       <a>lorem Ipsum</a>
       <a>Ipsum Lorem</a>
     </ul>

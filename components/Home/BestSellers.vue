@@ -60,12 +60,15 @@ export default defineComponent({
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
+      transition: 0.4s ease-out;
       &:hover {
+        background-color: var(--color);
+        color: var(--bg);
         img {
-          filter: grayscale(50%);
+          filter: grayscale(75%);
         }
-        div {
-          padding-left: 1.25rem;
+        h4 {
+          color: var(--bg);
         }
       }
       img {

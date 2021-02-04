@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p class="footer-heading">Place Holder Name</p>
+    <NuxtLink to="/" class="footer-heading">Place Holder Name</NuxtLink>
     <p class="footer-contact">(000) 000-0000</p>
     <p class="footer-contact">Lorem@Ipsum.dolar</p>
     <FooterNav />
