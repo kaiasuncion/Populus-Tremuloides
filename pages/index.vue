@@ -79,16 +79,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useAsync, useContext } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
-  setup() {
-    const { $content, error } = useContext()
-    const homeContent: object = useAsync(
-      async () => await $content('data/HomePage').fetch()
-    )
-    if (!homeContent) {
-      return error({ statusCode: 404, message: 'Content Not Found' })
-    }
+  async asyncData({ $content, error }) {
+    const homeContent = await $content('data/HomePage')
+      .fetch()
+      .catch(() => {
+        error({ statusCode: 404, message: 'Content Not Found' })
+      })
+
     return { homeContent }
   },
 })
