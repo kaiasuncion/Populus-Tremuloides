@@ -4,7 +4,9 @@
       <div class="hero-text">
         <h1>{{ homeContent.heading }}</h1>
         <p>{{ homeContent.paragraph01 }}</p>
-        <button class="main-button">Shop</button>
+        <NuxtLink to="/shop">
+          <button aria-label="shop" class="main-button">Shop</button>
+        </NuxtLink>
       </div>
       <img :src="homeContent.hero_image" alt="hero image" />
     </div>

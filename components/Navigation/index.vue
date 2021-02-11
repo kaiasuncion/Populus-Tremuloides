@@ -1,8 +1,7 @@
 <template>
   <nav :class="{ 'navbar--hidden': !showNavBar }">
     <NuxtLink class="brand-logo" to="/">
-      <Kai class="brand-logo" />
-      <!-- <Logo class="brand-logo" /> -->
+      <Logo class="brand-logo" />
     </NuxtLink>
     <ShoppingCart class="" />
     <button
@@ -30,11 +29,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
-// import Logo from '@/assets/place-holders/logoPlaceHolder.svg?inline'
+import Logo from '@/assets/place-holders/logoPlaceHolder.svg?inline'
 
 export default Vue.extend({
   components: {
-    // Logo,
+    Logo,
   },
   data() {
     return {
