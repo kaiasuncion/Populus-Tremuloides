@@ -22,21 +22,22 @@
 <style lang="scss" scoped>
 .news-letter-container {
   width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
   background-color: var(--bg-secondary);
   padding: 4rem;
   border-bottom: 0.25rem solid var(--border-color);
   box-shadow: 0 -0.25rem var(--border-color);
+  p {
+    margin-bottom: 0.5rem;
+  }
   .news-letter-wrapper {
+    margin: auto;
     max-width: 500px;
     .news-letter-heading {
       font-size: 2rem;
       text-align: center;
     }
     .subscribe-wrapper {
-      margin-top: 1rem;
+      margin: 1rem auto;
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
@@ -47,15 +48,16 @@
         border-radius: 0 0.5rem 0.5rem 0;
         padding: 0 1rem;
       }
-      :active,
-      :focus {
-        box-shadow: 0 0 0.25rem var(--button-color) inset;
-      }
       #email-input {
+        width: 100%;
         height: 3rem;
         color: #333;
         border-radius: 0.5rem 0 0 0.5rem;
         padding: 0 1rem;
+        &:active,
+        &:focus {
+          box-shadow: 0 0 0.25rem var(--button-color) inset;
+        }
       }
     }
   }

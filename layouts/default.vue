@@ -2,7 +2,7 @@
   <div>
     <Navigation />
     <Nuxt />
-    <Email />
+    <Newsletter />
     <Footer />
   </div>
 </template>

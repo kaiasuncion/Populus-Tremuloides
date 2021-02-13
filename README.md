@@ -1,5 +1,7 @@
 # PineappleFriedRice
 
+bare bone boiler with some resets, styles, components. Will update over time.
+
 **DON'T UPGRADE SASS LOADER PAST 10**
 
 ## Build Setup

@@ -1,0 +1,29 @@
+:root {
+  --color: #333;
+  --color-primary: #333;
+  --color-secondary: #333;
+  --bg: #fff;
+  --bg-secondary: #fff;
+  --border-color: #000;
+  --border-color-secondary: #a7a7a7;
+  --button-color: crimson;
+  --button-text: white;
+  --button-hover: rgb(161, 20, 49);
+  --shadow-color: black;
+  --overlay-color: hsla(0, 0%, 10%, 0.85);
+  --overlay-color-hover: rgba(75, 75, 75, 0.3);
+}
+.dark-mode {
+  --color: #fdfdfd;
+  --color-primary: #41b38a;
+  --color-secondary: #c3c3c3;
+  --bg: #071521;
+  --bg-secondary: #1a202c;
+}
+.light-mode {
+  --color: #0f0f0f;
+  --color-primary: #333;
+  --color-secondary: #1a1a1a;
+  --bg: #fff;
+  --bg-secondary: #e2e2e2;
+}
