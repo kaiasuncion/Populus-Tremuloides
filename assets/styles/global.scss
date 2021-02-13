@@ -36,27 +36,6 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--color);
   text-transform: capitalize;
 }
-.color-mode {
-  color: var(--color);
-}
-.primary-color-mode {
-  color: var(--color-primary);
-}
-.secondary-color-mode {
-  color: var(--color-secondary);
-}
-.bg-mode {
-  background-color: var(--bg);
-}
-.bg-secondary-mode {
-  background-color: var(--bg-secondary);
-}
-.border-mode {
-  border-color: var(--border-color);
-}
-.bottom-border {
-  border-bottom: 0.25rem solid var(--border-color);
-}
 .main-button {
   display: block;
   padding: 1rem 2rem;
