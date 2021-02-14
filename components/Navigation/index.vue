@@ -18,11 +18,15 @@
       :class="menuOpen ? 'hamburger-open' : 'hamburger-closed'"
       class="nav-menu"
     >
-      <NuxtLink to="/"><li @click="isMenuOpen()">Home</li></NuxtLink>
-      <NuxtLink to="/shop"><li @click="isMenuOpen()">Shop</li></NuxtLink>
-      <li>Item 3</li>
-      <li>Item 4</li>
-      <li>Item 5</li>
+      <NuxtLink to="/" class="nav-item"
+        ><li @click="isMenuOpen()">Home</li></NuxtLink
+      >
+      <NuxtLink to="/shop" class="nav-item"
+        ><li @click="isMenuOpen()">Shop</li></NuxtLink
+      >
+      <li class="nav-item">Item 3</li>
+      <li class="nav-item">Item 4</li>
+      <li class="nav-item">Item 5</li>
     </ul>
   </nav>
 </template>

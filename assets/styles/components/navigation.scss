@@ -70,7 +70,7 @@ nav {
     flex-flow: column nowrap;
     box-shadow: 0 0 2rem var(--shadow-color);
     overflow: auto;
-    li {
+    .nav-item {
       font-size: 1.5rem;
       margin: 1rem 2rem;
       padding: 0.5rem;

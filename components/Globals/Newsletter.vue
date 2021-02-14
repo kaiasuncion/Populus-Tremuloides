@@ -1,7 +1,7 @@
 <template>
   <div class="news-letter-container">
     <div class="news-letter-wrapper">
-      <p class="news-letter-heading">Place Holder Newsletter</p>
+      <p class="news-letter-heading heading">Place Holder Newsletter</p>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque officia
         fugit facere? Explicabo atque vitae quisquam, ad sed earum at sit
@@ -47,6 +47,10 @@
         color: var(--button-text);
         border-radius: 0 0.5rem 0.5rem 0;
         padding: 0 1rem;
+        transition: 0.1s ease-in-out;
+        &:hover {
+          background-color: var(--button-hover);
+        }
       }
       #email-input {
         width: 100%;

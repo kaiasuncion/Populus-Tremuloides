@@ -1,8 +1,8 @@
 <template>
   <footer>
-    <NuxtLink to="/" class="footer-heading">Place Holder Name</NuxtLink>
-    <p class="footer-contact">(000) 000-0000</p>
-    <p class="footer-contact">Lorem@Ipsum.dolar</p>
+    <NuxtLink to="/" class="footer-heading heading">Place Holder Name</NuxtLink>
+    <p class="footer-contact heading">(000) 000-0000</p>
+    <p class="footer-contact heading">Lorem@Ipsum.dolar</p>
     <FooterNav />
     <DarkMode />
     <p class="copy-place-holder">Kai Asuncion 2021</p>

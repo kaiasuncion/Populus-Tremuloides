@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <h1>Error: {{ error.statusCode }}, {{ error.message }}</h1>
-    <NuxtLink to="/">Return Home</NuxtLink>
+  <div class="error-container">
+    <div>
+      <h1>Error: {{ error.statusCode }}, {{ error.message }}</h1>
+      <NuxtLink to="/">Return Home</NuxtLink>
+    </div>
   </div>
 </template>
 
