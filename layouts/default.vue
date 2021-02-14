@@ -1,7 +1,13 @@
 <template>
   <div>
+    <div
+      id="snipcart"
+      data-config-modal-style="side"
+      :data-api-key="$config.apiSecret"
+      hidden
+    />
     <Navigation />
-    <Nuxt />
+    <Nuxt class="main-container" />
     <Newsletter />
     <Footer />
   </div>

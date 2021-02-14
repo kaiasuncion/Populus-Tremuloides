@@ -1,6 +1,7 @@
 {
   "name": "pineapple-fried-rice",
-  "version": "1.0.0",
+  "author": "Kai Asuncion",
+  "version": "0.75.0",
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",

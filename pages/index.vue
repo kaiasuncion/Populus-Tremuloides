@@ -22,6 +22,8 @@
         </a>
       </div>
     </div>
+    {{ $config.baseUrl }}
+    {{ $config.apiSecret }}
   </div>
 </template>
 

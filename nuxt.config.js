@@ -4,16 +4,32 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'PineappleFriedRice',
+    title: 'Populus Tremuloides',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Populus Tremuloides is a simple eCommerce starter utilizing Nuxtjs and Snipcart. Any headless CMS can be used with it, but was built with Forrestry.io',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://app.snipcart.com' },
+      { rel: 'preconnect', href: 'https://cdn.snipcart.com' },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.snipcart.com/themes/v3.0.28/default/snipcart.css',
+      },
+    ],
+    script: [
+      { src: 'https://cdn.snipcart.com/themes/v3.0.28/default/snipcart.js' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -35,13 +51,16 @@ export default {
     '@nuxtjs/svg',
     '@nuxtjs/composition-api',
   ],
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
-
+  privateRuntimeConfig: {
+    apiSecret: process.env.API_SECRET,
+    baseUrl: process.env.BASEURL,
+  },
+  loading: { color: 'var(--primary-color)', height: '1rem' },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 

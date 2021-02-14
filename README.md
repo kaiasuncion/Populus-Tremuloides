@@ -1,5 +1,7 @@
 # PineappleFriedRice
 
+Naming scheme when non specific: Pasta *e.g. lasagna, spagaghetti, ravioli...*
+
 bare bone boiler with some resets, styles, components. Will update over time.
 
 **DON'T UPGRADE SASS LOADER PAST 10**

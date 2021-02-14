@@ -5,7 +5,8 @@
 // color modes
 @import './colors';
 @import './mixins';
-
+// non specific components, too short to have its own page
+@import './components/lasagna.scss';
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -15,6 +16,9 @@ body {
   color: var(--color);
   // smooth transition on mode changes
   transition: background-color 0.3s;
+}
+.main-container {
+  padding-top: 4rem;
 }
 a {
   color: var(--color-primary);

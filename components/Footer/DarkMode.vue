@@ -56,14 +56,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style lang="scss">
-.mode-wrapper {
-  padding: 0.5rem;
-  border-radius: 100%;
-  .icon-mode {
-    height: 3rem;
-    fill: var(--color-primary);
-  }
-}
-</style>
