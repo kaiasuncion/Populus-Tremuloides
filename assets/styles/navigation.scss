@@ -14,11 +14,14 @@ nav {
   &.navbar--hidden {
     transform: translateY(-120%);
   }
+  @include small {
+    align-items: end;
+    .nav-cart {
+      order: 3;
+    }
+  }
   .brand-logo {
     height: 100%;
-  }
-  .buns {
-    background-color: var(--color);
   }
   .hamburger-icon {
     position: relative;
@@ -31,41 +34,41 @@ nav {
     @include small {
       display: none;
     }
-  }
-  .patty {
-    transition: all 0.5s ease-in-out;
-  }
-  .top-bun,
-  .bottom-bun {
-    content: '';
-    position: absolute;
-    width: 48px;
-    height: 0.2rem;
-    transition: all 0.5s ease-in-out;
-    z-index: 2;
-  }
-  .top-bun {
-    transform: translateY(-16px);
-  }
-  .bottom-bun {
-    transform: translateY(16px);
-  }
-  .mustard .patty {
-    transform: translateX(-50px);
-    background-color: transparent;
-  }
-  .mustard .top-bun {
-    transform: rotate(45deg);
-  }
-  .mustard .bottom-bun {
-    transform: rotate(-45deg);
+    .patty,
+    .top-bun,
+    .bottom-bun {
+      content: '';
+      background-color: var(--color);
+      position: absolute;
+      width: 48px;
+      height: 0.25rem;
+      transition: all 0.5s ease-in-out;
+      z-index: 2;
+    }
+    .top-bun {
+      transform: translateY(-16px);
+    }
+    .bottom-bun {
+      transform: translateY(16px);
+    }
+    &.mustard {
+      .top-bun {
+        transform: rotate(45deg);
+      }
+      .bottom-bun {
+        transform: rotate(-45deg);
+      }
+      .patty {
+        transform: translateX(-50px);
+        background-color: transparent;
+      }
+    }
   }
   .nav-menu {
     background-color: var(--bg);
     z-index: 1;
     display: flex;
     flex-flow: column nowrap;
-    overflow: auto;
     transition: ease-in-out 0.4s;
     @include xtra_small {
       width: 90%;
@@ -75,21 +78,30 @@ nav {
       position: fixed;
       max-width: 500px;
       box-shadow: 0 0 2rem var(--shadow-color);
+      .nav-item {
+        width: 50%;
+        font-size: 1.5rem;
+        margin: 1rem 2rem;
+        padding: 0.5rem;
+        &:hover {
+          box-shadow: -5px 0 var(--border-color);
+        }
+      }
     }
     @include small {
-      background-color: hotpink;
       flex-flow: row wrap;
       position: relative;
+      order: 2;
+      .nav-item {
+        margin: 0 0.5rem;
+        padding: 0 0.5rem;
+        &:hover {
+          box-shadow: 0 1px var(--border-color);
+        }
+      }
     }
     .nav-item {
-      font-size: 1.5rem;
-      margin: 1rem 2rem;
-      padding: 0.5rem;
       transition: 0.2s ease-out;
-      // width: 50%;
-      &:hover {
-        box-shadow: -5px 0 var(--border-color);
-      }
     }
   }
   .hamburger-open {

@@ -3,16 +3,16 @@
     <NuxtLink class="brand-logo" to="/">
       <Logo class="brand-logo" />
     </NuxtLink>
-    <ShoppingCart class="" />
+    <ShoppingCart class="nav-cart" />
     <button
       aria-label="menu button"
       class="hamburger-icon"
       :class="menuOpen ? 'mustard' : ''"
       @click="isMenuOpen()"
     >
-      <span class="buns top-bun"></span>
-      <span class="patty">Menu</span>
-      <span class="buns bottom-bun"></span>
+      <span class="top-bun"></span>
+      <span class="patty"></span>
+      <span class="bottom-bun"></span>
     </button>
     <ul
       :class="menuOpen ? 'hamburger-open' : 'hamburger-closed'"
