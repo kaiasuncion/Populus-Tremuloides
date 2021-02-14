@@ -5,7 +5,7 @@
         <component
           :is="`${mode}-icon`"
           v-show="$colorMode.preference === mode"
-          class="icon-mode cursor-pointer"
+          class="icon-mode"
           @click="selectColorMode()"
         />
       </li>
