@@ -51,8 +51,10 @@ Important Note to self, ALWAYS COMMIT BEFORE PULLING
     * index
 
 #### Components
-  * Recents
-  * Featured
-  * Best Sellers
+  * Consolodate into one component
+    * Recents
+    * Featured
+    * Best Sellers
+    * Related
   * Banner
   * ProductGallery
