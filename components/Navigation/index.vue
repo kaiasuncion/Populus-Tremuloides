@@ -19,10 +19,10 @@
       class="nav-menu"
     >
       <NuxtLink to="/" class="nav-item"
-        ><li @click="isMenuOpen()">Home</li></NuxtLink
+        ><li @click="menuOpen = false">Home</li></NuxtLink
       >
       <NuxtLink to="/shop" class="nav-item"
-        ><li @click="isMenuOpen()">Shop</li></NuxtLink
+        ><li @click="menuOpen = false">Shop</li></NuxtLink
       >
       <li class="nav-item">Item 3</li>
       <li class="nav-item">Item 4</li>

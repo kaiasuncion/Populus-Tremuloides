@@ -1,0 +1,18 @@
+{
+  "home_gallery": [
+    "/uploads/benu.jpg",
+    "/uploads/_mg_6670.jpg",
+    "/uploads/plant00.jpg",
+    "/uploads/biki_bikes.jpg",
+    "/uploads/fish00.jpg",
+    "/uploads/flower01.jpg",
+    "/uploads/flower03.jpg",
+    "/uploads/pen04.jpg"
+  ],
+  "hero_image": "/uploads/monstera.jpg",
+  "image03": "/uploads/_mg_6435.jpg",
+  "heading": "Populous Tremuloides",
+  "paragraph01": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut ultrices urna. Nam ut placerat magna. Nulla maximus pulvinar ligula ac convallis. Pellentesque faucibus nisi metus, vel laoreet libero ullamcorper id. Nam porta ante ex, nec gravida urna pharetra in.",
+  "paragraph02": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut ultrices urna. Nam ut placerat magna. Nulla maximus pulvinar ligula ac convallis. Pellentesque faucibus nisi metus, vel laoreet libero ullamcorper id. Nam porta ante ex, nec gravida urna pharetra in.",
+  "paragraph03": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut ultrices urna. Nam ut placerat magna. Nulla maximus pulvinar ligula ac convallis. Pellentesque faucibus nisi metus, vel laoreet libero ullamcorper id. Nam porta ante ex, nec gravida urna pharetra in."
+}

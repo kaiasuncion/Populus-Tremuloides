@@ -1,15 +1,13 @@
 // raleway font from googlefonts
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
-// Nuxt-Content
-@import './content';
-// Navigation Component
-@import './navigation';
-// color modes
-@import './colors';
-// mixins and variables
-@import './mixins';
+// variables, mixins, etc
+@import './variables/colors.scss';
+@import './variables/mixins.scss';
+// components
+@import './components/content.scss';
+@import './components/navigation.scss';
 // non specific components, too short to have its own page
-@import './lasagna.scss';
+@import './components/lasagna.scss';
 body {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -56,7 +54,7 @@ h1,h2,h3,h4,h5,h6,.heading {
 // layouts
 .main-container {
   padding-top: 4rem;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 // error layout

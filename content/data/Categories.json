@@ -1,0 +1,27 @@
+{
+  "heading": "Categories",
+  "description": "Select a category you would like to shop by. e.g. Cats or Dogs || Brand || Cameras or Lens || Brownies or Cookies || Coffee or Tea || etc.",
+  "category": [
+    {
+      "title": "Handsome Collection",
+      "image": "/uploads/biki_bikes.jpg",
+      "path": "Handsome-Collection"
+    },
+    {
+      "title": "Flora",
+      "image": "/uploads/flower01.jpg",
+      "path": "Flora"
+    },
+    {
+      "title": "Fish",
+      "image": "/uploads/fish00.jpg",
+      "path": "Fish"
+    },
+    {
+      "title": "All",
+      "image": "/uploads/_mg_6435.jpg",
+      "path": "all"
+    }
+  ],
+  "seo_description": "Shop - All | The Handsome collection | Flora | Fish"
+}

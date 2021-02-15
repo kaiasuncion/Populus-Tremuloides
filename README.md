@@ -1,26 +1,58 @@
-# PineappleFriedRice
+Scope: Ecommerce
+Stack: NuxtJS + Forestry + Snipcart + Stripe + Netlify
 
-Naming scheme when non specific: Pasta *e.g. lasagna, spagaghetti, ravioli...*
+Step One: NuxtJS + Snipcart
 
-bare bone boiler with some resets, styles, components. Will update over time.
+Step Two: Forestry
 
-**DON'T UPGRADE SASS LOADER PAST 10**
+Step Three: Stripe
 
-## Build Setup
+Step Four: ???
 
-```bash
-# install dependencies
-$ yarn install
+Step Five: Deploy?
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+## User Experience
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+### Template Flowchart
 
-# generate static project
-$ yarn generate
-```
+This flow chart shows how the user will navigate the template. This flowchart also includes the dev experience of using Snipcart, e.g. data-items.
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+![Flow Chart](/assets/mock-ups/User__Dev_Flow_Chart.png)
+
+### Template Mockup
+
+![Responsive Design Mock Up](/assets/mock-ups/MockUp.jpg)
+[Prototype Mockup Credit](https://www.behance.net/gallery/53339171/iScreens-Free-Mock-up)
+
+Naming scheme when non specific: Pasta e.g. lasagna, spagaghetti, ravioli...
+
+Important Note to self, ALWAYS COMMIT BEFORE PULLING
+
+### Todos:
+
+#### Pages
+
+  * index
+    * Hero area
+    * New products
+    * Info blocks
+    * Banner
+    * Featured products
+    * Info container
+    * Best sellers
+
+  * _.vue
+    * Dynamic add to cart button
+    * Product image gallery
+    * Related products
+
+  * shop
+    * _categories
+    * index
+
+#### Components
+  * Recents
+  * Featured
+  * Best Sellers
+  * Banner
+  * ProductGallery
