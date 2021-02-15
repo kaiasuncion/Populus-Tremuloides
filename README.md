@@ -33,12 +33,12 @@ Important Note to self, ALWAYS COMMIT BEFORE PULLING
 #### Pages
 
   * index
-    * Hero area
+    * ~~Hero area~~
     * New products
-    * Info blocks
-    * Banner
+    * ~~Info blocks~~
+    * ~~Banner~~
     * Featured products
-    * Info container
+    * ~~Info container~~
     * Best sellers
 
   * _.vue
@@ -56,5 +56,4 @@ Important Note to self, ALWAYS COMMIT BEFORE PULLING
     * Featured
     * Best Sellers
     * Related
-  * Banner
-  * ProductGallery
+  * ~~ProductGallery~~
