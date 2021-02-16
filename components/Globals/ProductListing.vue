@@ -1,8 +1,13 @@
 <template>
-  <ul class="recent-container">
+  <ul class="listing-container">
     <li v-for="listing in products" :key="listing.path">
-      <NuxtLink :to="`${listing.path}`" class="recent-wrapper">
-        <img :src="listing.product_image" :alt="listing.title" />
+      <NuxtLink :to="`${listing.path}`">
+        <img
+          :src="listing.product_image"
+          :alt="listing.title"
+          height="70%"
+          width="100%"
+        />
         <div>
           <h2>{{ listing.title }}</h2>
           <p>
@@ -35,48 +40,36 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 @import '~/assets/styles/variables/mixins.scss';
-.recent-container {
+.listing-container {
   justify-content: space-evenly;
-  @include small {
-    display: flex;
-    flex-flow: row wrap;
-    margin-bottom: 2rem;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 2rem;
   li {
-    position: relative;
-    height: 40vh;
-    border-top: 0.25rem solid var(--border-color);
-    @include small {
-      width: 30vw;
-      border: 0.25rem solid var(--border-color);
-      margin-bottom: 1rem;
+    height: 45rem;
+    width: 30rem;
+    margin: 1rem;
+    text-align: center;
+    border: 0.25rem solid var(--border-color);
+    transition: 0.4s ease-out;
+    img {
+      object-fit: cover;
+      border-bottom: 0.25rem solid var(--border-color);
     }
-    .recent-wrapper {
-      img {
-        position: absolute;
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-      }
+    div {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      height: 30%;
+    }
+    &:hover {
+      background-color: var(--border-color);
       div {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--overlay-color);
-        padding: 1rem;
-        color: white;
-        height: 100%;
-        transition: 0.4s ease-out;
+        color: var(--bg);
         h2 {
-          font-size: 2rem;
-          color: white;
-        }
-      }
-      &:hover {
-        div {
-          background-color: var(--overlay-color-hover);
+          color: var(--bg);
         }
       }
     }

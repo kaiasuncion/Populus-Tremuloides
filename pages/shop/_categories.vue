@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>{{ $route.params.categories }}</h1>
     <ProductListing :products="category" />
   </div>
 </template>
@@ -17,3 +18,12 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+h1 {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.25rem var(--border-color);
+}
+</style>
