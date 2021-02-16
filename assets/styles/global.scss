@@ -22,7 +22,6 @@ a {
   color: var(--color-primary);
 }
 p {
-  font-size: 1rem;
   line-height: 1.5;
 }
 button {
@@ -38,6 +37,9 @@ h1,h2,h3,h4,h5,h6,.heading {
   color: var(--color);
   font-family: 'Raleway', sans-serif;
   text-transform: capitalize;
+}
+h1 {
+  font-size: 3rem;
 }
 .main-button {
   display: block;

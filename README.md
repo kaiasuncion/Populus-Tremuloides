@@ -34,12 +34,12 @@ Important Note to self, ALWAYS COMMIT BEFORE PULLING
 
   * index
     * ~~Hero area~~
-    * New products
+    * ~~New products~~
     * ~~Info blocks~~
     * ~~Banner~~
-    * Featured products
+    * ~~Featured products~~
     * ~~Info container~~
-    * Best sellers
+    * ~~Best sellers~~
 
   * _.vue
     * Dynamic add to cart button
@@ -48,12 +48,12 @@ Important Note to self, ALWAYS COMMIT BEFORE PULLING
 
   * shop
     * _categories
-    * index
+    * ~~index~~
 
-#### Components
-  * Consolodate into one component
-    * Recents
-    * Featured
-    * Best Sellers
-    * Related
+#### ~~Components~~
+  * ~~Consolodate into one component~~
+    * ~~Recents~~
+    * ~~Featured~~
+    * ~~Best Sellers~~
+    * ~~Related~~
   * ~~ProductGallery~~

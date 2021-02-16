@@ -1,16 +1,16 @@
 <template>
-  <ul class="recent-container">
-    <li v-for="recent in recentProducts" :key="recent.path">
-      <NuxtLink :to="`${recent.path}`" class="recent-wrapper">
-        <img :src="recent.product_image" :alt="recent.title" />
+  <ul class="featured-container">
+    <li v-for="featured in products" :key="featured.path">
+      <NuxtLink :to="`${featured.path}`" class="featured-wrapper">
+        <img :src="featured.product_image" :alt="featured.title" />
         <div>
-          <h2>{{ recent.title }}</h2>
+          <h2>{{ featured.title }}</h2>
           <p>
             {{
               Intl.NumberFormat('en', {
                 style: 'currency',
                 currency: 'USD',
-              }).format(recent.product_price)
+              }).format(featured.product_price)
             }}
           </p>
         </div>
@@ -20,43 +20,41 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext, useAsync } from '@nuxtjs/composition-api'
+import Vue from 'vue'
 
-export default defineComponent({
-  setup() {
-    const { $content } = useContext()
-    const recentProducts = useAsync(
-      async () =>
-        await $content('products', { deep: true })
-          .without('body')
-          .sortBy('createdAt', 'desc')
-          .limit(6)
-          .fetch()
-    )
-    return { recentProducts }
+export default Vue.extend({
+  props: {
+    products: {
+      type: Array,
+      required: true,
+      default: () => null,
+    },
   },
 })
 </script>
 
 <style lang="scss" scoped>
 @import '~/assets/styles/variables/mixins.scss';
-.recent-container {
+.featured-container {
   justify-content: space-evenly;
+  margin-bottom: 2rem;
   @include small {
     display: flex;
     flex-flow: row wrap;
-    margin-bottom: 2rem;
   }
   li {
     position: relative;
     height: 40vh;
     border-top: 0.25rem solid var(--border-color);
+    &:last-child {
+      border-bottom: 0.25rem solid var(--border-color);
+    }
     @include small {
       width: 30vw;
       border: 0.25rem solid var(--border-color);
       margin-bottom: 1rem;
     }
-    .recent-wrapper {
+    .featured-wrapper {
       img {
         position: absolute;
         object-fit: cover;
@@ -75,6 +73,7 @@ export default defineComponent({
         height: 100%;
         transition: 0.4s ease-out;
         h2 {
+          text-align: center;
           font-size: 2rem;
           color: white;
         }

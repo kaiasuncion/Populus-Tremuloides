@@ -1,16 +1,6 @@
 <template>
   <div>
-    {{ category }}
-    <!-- <ul v-for="listing in category.category" :key="listing.title">
-      <li>
-        {{ listing.slug }}
-        <NuxtLink :to="`shop/${listing.path}`">
-          <h1>{{ listing.title }}</h1>
-          <p>{{ listing.path }}</p>
-          <img :src="listing.image" :alt="listing.title" />
-        </NuxtLink>
-      </li>
-    </ul> -->
+    <ProductListing :products="category" />
   </div>
 </template>
 
@@ -27,9 +17,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss" scoped>
-img {
-  height: 50px;
-}
-</style>

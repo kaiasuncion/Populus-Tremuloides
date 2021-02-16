@@ -10,7 +10,8 @@
       </div>
       <img :src="homeContent.hero_image" alt="hero image" />
     </div>
-    <Recent />
+    <!-- new products -->
+    <ProductFeature :products="recentlyAdded" />
     <div class="section-two">
       <div class="block-wrapper">
         <h2>Lorem Ipsum</h2>
@@ -41,7 +42,8 @@
       </div>
     </div>
     <Banner />
-    <Featured />
+    <!-- featured -->
+    <ProductFeature :products="featuredProducts" />
     <div class="section-three">
       <div class="section-three-wrapper">
         <h3>Lorem Ipsum</h3>
@@ -84,13 +86,27 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   async asyncData({ $content, error }) {
+    const recentlyAdded = await $content('products', { deep: true })
+      .without('body')
+      .sortBy('createdAt', 'desc')
+      .limit(6)
+      .fetch()
+    const featuredProducts = await $content('products', { deep: true })
+      .without('body')
+      .where({ tags: { $contains: 'Featured' } })
+      .limit(3)
+      .fetch()
     const homeContent = await $content('data/HomePage')
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Content Not Found' })
       })
 
-    return { homeContent }
+    return {
+      recentlyAdded,
+      featuredProducts,
+      homeContent,
+    }
   },
 })
 </script>
@@ -103,6 +119,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   min-height: 70vh;
+  max-height: 100vh;
   margin-bottom: 4rem;
   @include large {
     flex-direction: row;
@@ -162,11 +179,11 @@ export default defineComponent({
   }
 }
 .section-two {
-  padding: 2rem;
+  margin-bottom: 2rem;
   @include large {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   .block-wrapper {
     display: flex;
