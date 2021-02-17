@@ -18,15 +18,23 @@
       :class="menuOpen ? 'hamburger-open' : 'hamburger-closed'"
       class="nav-menu"
     >
-      <NuxtLink to="/" class="nav-item"
-        ><li @click="menuOpen = false">Home</li></NuxtLink
-      >
-      <NuxtLink to="/shop" class="nav-item"
-        ><li @click="menuOpen = false">Shop</li></NuxtLink
-      >
-      <li class="nav-item">Item 3</li>
-      <li class="nav-item">Item 4</li>
-      <li class="nav-item">Item 5</li>
+      <li @click="closeBurger()">
+        <NuxtLink to="/" class="nav-item">Home</NuxtLink>
+      </li>
+      <li @click="closeBurger()">
+        <NuxtLink to="/shop" class="nav-item">Shop</NuxtLink>
+      </li>
+      <li @click="closeBurger()">
+        <NuxtLink to="/shop/Handsome-Collection" class="nav-item"
+          >Handsome Collection</NuxtLink
+        >
+      </li>
+      <li @click="closeBurger()">
+        <NuxtLink to="/shop/Flora" class="nav-item">Flora</NuxtLink>
+      </li>
+      <li @click="closeBurger()">
+        <NuxtLink to="/shop/Fish" class="nav-item">Fish</NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>
@@ -69,6 +77,10 @@ export default Vue.extend({
         this.menuOpen = false
         document.body.style.overflow = 'auto'
       }
+    },
+    closeBurger() {
+      this.menuOpen = false
+      document.body.style.overflow = 'auto'
     },
     onScroll() {
       const currentScrollPosition: number =

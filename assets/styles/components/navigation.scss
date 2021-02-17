@@ -68,21 +68,25 @@ nav {
     background-color: var(--bg);
     z-index: 1;
     display: flex;
-    flex-flow: column nowrap;
     transition: ease-in-out 0.4s;
     @include xtra_small {
-      width: 90%;
+      flex-flow: column nowrap;
+      width: 100%;
       top: 0;
       right: -120%;
       height: 100vh;
       position: fixed;
       max-width: 500px;
       box-shadow: 0 0 2rem var(--shadow-color);
+      align-items: start;
+      justify-content: space-evenly;
+      li {
+        margin-left: 2rem;
+      }
       .nav-item {
-        width: 50%;
+        width: 100%;
         font-size: 1.5rem;
-        margin: 1rem 2rem;
-        padding: 0.5rem;
+        padding: 1rem 2rem;
         &:hover {
           box-shadow: -5px 0 var(--border-color);
         }
@@ -90,15 +94,20 @@ nav {
     }
     @include small {
       flex-flow: row wrap;
+      justify-content: space-evenly;
       position: relative;
       order: 2;
       .nav-item {
         margin: 0 0.5rem;
         padding: 0 0.5rem;
         &:hover {
-          box-shadow: 0 1px var(--border-color);
+          box-shadow: -5px 0 var(--border-color);
         }
       }
+    }
+    .nuxt-link-exact-active {
+      // font-weight: bold;
+      box-shadow: -5px 0 var(--button-color);
     }
     .nav-item {
       transition: 0.2s ease-out;

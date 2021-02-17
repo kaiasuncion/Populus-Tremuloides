@@ -37,15 +37,17 @@ export default Vue.extend({
 h1 {
   text-align: center;
   padding: 1rem;
-  margin-bottom: 1rem;
   box-shadow: 0 0.25rem var(--border-color);
+  @include small {
+    margin-bottom: 1rem;
+  }
 }
 .category-card-holder {
   justify-content: space-evenly;
-  margin-bottom: 1rem;
   @include small {
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 1rem;
   }
   li {
     position: relative;

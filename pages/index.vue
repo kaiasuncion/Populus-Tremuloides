@@ -123,9 +123,6 @@ export default defineComponent({
   margin-bottom: 4rem;
   @include large {
     flex-direction: row;
-    img {
-      width: 50vw;
-    }
   }
   .hero-text {
     width: 100%;
@@ -170,10 +167,12 @@ export default defineComponent({
   }
   img {
     min-height: 70vh;
+    width: 100%;
     object-fit: cover;
     z-index: -1;
     border-bottom: 0.25rem solid var(--border-color);
     @include large {
+      width: 50vw;
       border-left: 0.25rem solid var(--border-color);
     }
   }
@@ -229,6 +228,7 @@ export default defineComponent({
       background-color: var(--border-color);
       columns: 2;
       gap: 0.25rem;
+      line-height: 0;
       @include large {
         columns: 2;
       }

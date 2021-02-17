@@ -252,6 +252,7 @@ input {
   padding: 0.25rem;
   font-size: 1.5rem;
   text-align: center;
+  color: var(--color);
   background-color: var(--bg);
 }
 input::-webkit-outer-spin-button,
