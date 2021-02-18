@@ -72,6 +72,13 @@ fields:
     config:
       required: false
     label: Options
+  - name: displayed_options
+    type: list
+    config:
+      use_select: false
+      min: 
+      max: 
+    label: Displayed Options
   config:
     min: 
     max: 
