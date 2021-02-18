@@ -1,0 +1,13 @@
+---
+label: Tags
+hide_body: true
+fields:
+- name: tag
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Tag
+pages:
+- content/data/Tags.json

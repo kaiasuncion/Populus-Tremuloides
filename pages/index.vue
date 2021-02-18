@@ -203,7 +203,7 @@ export default defineComponent({
 }
 .section-three {
   border-top: 0.25rem solid var(--border-color);
-  border-bottom: 0.25rem solid var(--border-color);
+  // border-bottom: 0.25rem solid var(--border-color);
   @include medium {
     display: flex;
     flex-direction: row-reverse;

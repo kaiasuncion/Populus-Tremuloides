@@ -1,0 +1,31 @@
+---
+label: Home
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: true
+  label: Heading
+- name: paragraph01
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Paragraph01
+  description: This is the paragraph that appears above the crease
+- name: hero_image
+  type: file
+  config:
+    maxSize: 64
+  label: Hero Image
+  description: This image appears above the crease
+- name: home_gallery
+  type: image_gallery
+  config: {}
+  label: Home Gallery
+pages:
+- content/data/HomePage.json

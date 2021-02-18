@@ -1,0 +1,95 @@
+---
+label: Product
+hide_body: false
+display_field: shot_description
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Name
+  description: Name of the product
+- name: product_id
+  type: text
+  config:
+    required: true
+  label: Product ID
+- name: short_description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Short Description
+  description: Short description
+- name: product_image
+  type: file
+  config:
+    maxSize: 10
+  label: Thumbnail
+  description: Thumbnail for when showing up in lists and the cart
+- name: image_gallery
+  type: image_gallery
+  config: {}
+  label: Image Gallery
+  description: A collection of images for the product
+- name: date_added
+  type: datetime
+  description: Select the date this product is added
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Date Added
+- name: product_price
+  type: number
+  label: Product Price
+  description: The price of the product
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: custom_fields
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: required
+    type: boolean
+    label: Required
+    default: true
+  - name: options
+    type: text
+    config:
+      required: false
+    label: Options
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Custom Fields
+  description: Does the product have varieties e.g. Color, Price, Material, Size,
+    etc
+- name: tags
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: tags
+      file: content/data/Tags.json
+      path: tag
+  label: Tags
+pages:
+- content/products/h2-oh.md

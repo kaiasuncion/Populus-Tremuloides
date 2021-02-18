@@ -42,6 +42,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import '~/assets/styles/variables/mixins.scss';
 .best-seller-container {
+  box-shadow: 0 -0.25rem black;
   @include medium {
     display: flex;
     flex-flow: row wrap;

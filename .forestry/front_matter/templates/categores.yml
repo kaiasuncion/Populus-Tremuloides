@@ -1,0 +1,48 @@
+---
+label: Categores
+hide_body: true
+fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: seo_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Seo Description
+  description: This description won't be shown on the page. It helps search engines
+    find this page or when provides content when this page is shared.
+- name: category
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    description: Category title
+    label: Title
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: path
+    type: text
+    config:
+      required: false
+    label: Path
+    description: populous-tremuloides/shop/categories/${category name}
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Category
+  description: Category container for name, image, path
+pages:
+- content/data/Categories.json
