@@ -19,10 +19,11 @@
 
           <div>
             <ul>
-              <li v-for="cfs in custom_fields" :key="cfs">
-                <select id="">
+              <li v-for="cfs in product.custom_fields" :key="cfs">
+                {{ cfs }}
+                <select id="throwaway">
                   <option
-                    v-for="spaghetti in ravioli"
+                    v-for="spaghetti in cfs.displayed_options"
                     :key="spaghetti"
                     :value="spaghetti"
                   >
