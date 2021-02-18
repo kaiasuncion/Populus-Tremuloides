@@ -12,9 +12,17 @@ custom_fields:
 - title: Nib Size
   required: true
   options: Extra Fine | Fine | Medium | Bold
+  displayed_options:
+  - Extra Fine
+  - Fine
+  - Medium
+  - Bold
 - title: Filling Mechanism
   required: true
   options: Black Ink Cartridge | Converter[+5]
+  displayed_options:
+  - Black Ink Cartridge
+  - Converter
 short_description: Benu fountain pen part of the Hexagon Collection
 product_id: benu-hex-c
 image_gallery:
