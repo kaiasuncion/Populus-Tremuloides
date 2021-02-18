@@ -16,6 +16,23 @@
         <!-- update item before adding to cart -->
         <div class="custom-fields-container">
           <!-- if custom fields -->
+
+          <div>
+            <ul>
+              <li v-for="cfs in custom_fields" :key="cfs">
+                <select id="">
+                  <option
+                    v-for="spaghetti in ravioli"
+                    :key="spaghetti"
+                    :value="spaghetti"
+                  >
+                    {{ spaghetti }}
+                  </option>
+                </select>
+              </li>
+            </ul>
+          </div>
+
           <!-- quantity -->
           <label for="quantity">Quantity</label>
           <div class="quantity-container">
