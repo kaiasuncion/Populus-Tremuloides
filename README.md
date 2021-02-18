@@ -1,15 +1,5 @@
 Scope: Ecommerce
-Stack: NuxtJS + Forestry + Snipcart + Stripe + Netlify
-
-Step One: NuxtJS + Snipcart
-
-Step Two: Forestry
-
-Step Three: Stripe
-
-Step Four: ???
-
-Step Five: Deploy?
+Stack: NuxtJS + Forestry + Snipcart + Netlify
 
 ## User Experience
 
@@ -47,7 +37,7 @@ Important Note to self, ALWAYS COMMIT BEFORE PULLING
     * Related products
 
   * shop
-    * _categories
+    * ~~_categories~~
     * ~~index~~
 
 #### ~~Components~~
