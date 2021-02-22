@@ -13,30 +13,10 @@
             }).format(product.product_price)
           }}
         </p>
-        <!-- update item before adding to cart -->
-        <div class="custom-fields-container">
-          <!-- if custom fields -->
-
-          <div>
-            <ul>
-              <li v-for="cfs in product.custom_fields" :key="cfs">
-                {{ cfs }}
-                <select id="throwaway">
-                  <option
-                    v-for="spaghetti in cfs.displayed_options"
-                    :key="spaghetti"
-                    :value="spaghetti"
-                  >
-                    {{ spaghetti }}
-                  </option>
-                </select>
-              </li>
-            </ul>
-          </div>
-
-          <!-- quantity -->
+        <!-- quantity -->
+        <div class="quantity-container">
           <label for="quantity">Quantity</label>
-          <div class="quantity-container">
+          <div class="quantity-wrapper">
             <button
               aria-label="Decrement button"
               class="quantity-buttons decrement-button"
@@ -55,15 +35,6 @@
               @click="increment()"
             ></button>
           </div>
-          <!-- if you want to display price on page -->
-          <!-- <p>
-            {{
-              Intl.NumberFormat('en', {
-                style: 'currency',
-                currency: 'USD',
-              }).format(quantity.value * product.product_price)
-            }}
-          </p> -->
         </div>
         <button
           aria-label="Add to cart"
@@ -76,6 +47,7 @@
           :data-item-image="product.product_image"
           :data-item-quantity="`${quantity.value}`"
           v-bind="customFields"
+          :disabled="quantity.value <= 0"
         >
           Add to Cart
         </button>
@@ -175,33 +147,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/styles/variables/mixins.scss';
-ul {
-  height: 50vh;
-  border-bottom: 0.25rem solid var(--border-color);
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  li {
-    border-top: 0.25rem solid var(--border-color);
-    &:first-child {
-      border-top: none;
-    }
-  }
-  @include medium {
-    height: 80vh;
-    overflow: scroll;
-    border-right: 0.25rem solid var(--border-color);
-    border-bottom: none;
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-}
 .shop-container {
   margin: 2rem;
   display: flex;
@@ -210,58 +155,57 @@ ul {
   align-items: center;
   text-align: center;
 }
-.custom-fields-container {
-  text-align: center;
-  margin-top: 1rem;
-}
 .quantity-container {
-  position: relative;
-  margin: 0 auto 2rem auto;
-  width: 120px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--border-color-secondary);
-  .quantity-buttons {
-    width: 2rem;
-    height: 1.5rem;
-    font-size: 1.5rem;
+  width: 134px;
+  margin: 1rem auto;
+  .quantity-wrapper {
+    position: relative;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-  }
-  .decrement-button {
-    border-right: 1px solid var(--border-color-secondary);
-    &.decrement-button::before {
-      content: '';
-      height: 2px;
-      width: 20px;
-      display: block;
-      background-color: var(--color);
+    border: 1px solid var(--border-color-secondary);
+    .quantity-buttons {
+      width: 2rem;
+      margin: auto;
+      height: 1.5rem;
+      font-size: 1.5rem;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
     }
-  }
-  .increment-button {
-    border-left: 1px solid var(--border-color-secondary);
-    &.increment-button::before,
-    &.increment-button::after {
+    .decrement-button {
+      border-right: 1px solid var(--border-color-secondary);
+      &.decrement-button::before {
+        content: '';
+        height: 2px;
+        width: 20px;
+        display: block;
+        background-color: var(--color);
+      }
+    }
+    .increment-button {
+      border-left: 1px solid var(--border-color-secondary);
+      &.increment-button::before,
+      &.increment-button::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        display: block;
+        background-color: var(--color);
+      }
+    }
+    .increment-button::after {
       content: '';
       position: absolute;
       height: 2px;
       width: 20px;
       display: block;
       background-color: var(--color);
+      transform: rotate(90deg);
     }
-  }
-  .increment-button::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 20px;
-    display: block;
-    background-color: var(--color);
-    transform: rotate(90deg);
   }
 }
 input {
@@ -322,10 +266,11 @@ input[type='number'] {
     }
   }
   .add-to-cart {
+    width: 100%;
+    max-width: 134px;
     display: block;
     background-color: var(--button-color);
     color: var(--button-text);
-    margin: 0 auto 1rem auto;
     border-radius: 0.5rem;
     padding: 1rem 2rem;
   }
