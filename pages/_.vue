@@ -1,59 +1,62 @@
 <template>
-  <div class="product-container">
-    <ProductGallery :images="product.image_gallery" />
-    <div class="product-details">
-      <div class="shop-container">
-        <h1>{{ product.title }}</h1>
-        <p class="short-description">{{ product.short_description }}</p>
-        <p class="product-price">
-          {{
-            Intl.NumberFormat('en', {
-              style: 'currency',
-              currency: 'USD',
-            }).format(product.product_price)
-          }}
-        </p>
-        <!-- quantity -->
-        <div class="quantity-container">
-          <label for="quantity">Quantity</label>
-          <div class="quantity-wrapper">
-            <button
-              aria-label="Decrement button"
-              class="quantity-buttons decrement-button"
-              @click="decrement()"
-            ></button>
-            <input
-              id="quantity"
-              v-model="quantity.value"
-              type="number"
-              min="1"
-              value="1"
-            />
-            <button
-              aria-label="Increment button"
-              class="quantity-buttons increment-button"
-              @click="increment()"
-            ></button>
+  <div>
+    <div class="product-container">
+      <ProductGallery :images="product.image_gallery" />
+      <div class="product-details">
+        <div class="shop-container">
+          <h1>{{ product.title }}</h1>
+          <p class="short-description">{{ product.short_description }}</p>
+          <p class="product-price">
+            {{
+              Intl.NumberFormat('en', {
+                style: 'currency',
+                currency: 'USD',
+              }).format(product.product_price)
+            }}
+          </p>
+          <!-- quantity -->
+          <div class="quantity-container">
+            <label for="quantity">Quantity</label>
+            <div class="quantity-wrapper">
+              <button
+                aria-label="Decrement button"
+                class="quantity-buttons decrement-button"
+                @click="decrement()"
+              ></button>
+              <input
+                id="quantity"
+                v-model="quantity.value"
+                type="number"
+                min="1"
+                value="1"
+              />
+              <button
+                aria-label="Increment button"
+                class="quantity-buttons increment-button"
+                @click="increment()"
+              ></button>
+            </div>
           </div>
+          <button
+            aria-label="Add to cart"
+            class="snipcart-add-item add-to-cart"
+            :data-item-name="product.title"
+            :data-item-id="product.product_id"
+            :data-item-price="product.product_price"
+            :data-item-url="`${$config.baseUrl}${path}`"
+            :data-item-description="product.short_description"
+            :data-item-image="product.product_image"
+            :data-item-quantity="`${quantity.value}`"
+            v-bind="customFields"
+            :disabled="quantity.value <= 0"
+          >
+            Add to Cart
+          </button>
         </div>
-        <button
-          aria-label="Add to cart"
-          class="snipcart-add-item add-to-cart"
-          :data-item-name="product.title"
-          :data-item-id="product.product_id"
-          :data-item-price="product.product_price"
-          :data-item-url="`${$config.baseUrl}${path}`"
-          :data-item-description="product.short_description"
-          :data-item-image="product.product_image"
-          :data-item-quantity="`${quantity.value}`"
-          v-bind="customFields"
-          :disabled="quantity.value <= 0"
-        >
-          Add to Cart
-        </button>
+        <nuxt-content :document="product" />
       </div>
-      <nuxt-content :document="product" />
     </div>
+    <ProductFeature :products="relatedProducts" />
   </div>
 </template>
 
@@ -61,7 +64,13 @@
 export default {
   async asyncData({ $content, params, error }) {
     const path = `/${params.pathMatch || 'index'}`
-    const [product] = await $content({ deep: true }).where({ path }).fetch()
+    const [product] = await $content('products', { deep: true })
+      .where({ path })
+      .fetch()
+    const relatedProducts = await $content('products', { deep: true })
+      .where({ tags: { $contains: product.tags } })
+      .without(['body'])
+      .fetch()
     if (!product) {
       return error({ statusCode: 404, message: 'Page not found - ' + path })
     }
@@ -69,6 +78,7 @@ export default {
     return {
       product,
       path,
+      relatedProducts,
     }
   },
   data() {
@@ -226,11 +236,12 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 .product-container {
-  border-bottom: 0.25rem solid var(--border-color);
   @include medium {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-height: 90vh;
+    margin-bottom: 2rem;
+    border-bottom: 0.25rem solid var(--border-color);
     .product-details {
       overflow: scroll;
       max-height: 80vh;
