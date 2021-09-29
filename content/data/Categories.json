@@ -3,6 +3,11 @@
   "description": "Select a category you would like to shop by. e.g. Cats or Dogs || Brand || Cameras or Lens || Brownies or Cookies || Coffee or Tea || etc.",
   "category": [
     {
+      "title": "Dog Biscuits",
+      "image": "/uploads/porche00.jpg",
+      "path": "populous-tremuloides/shop/categories/dead-link"
+    },
+    {
       "title": "All",
       "image": "/uploads/_mg_6435.jpg",
       "path": "all"
